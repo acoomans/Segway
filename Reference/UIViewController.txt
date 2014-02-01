@@ -1,0 +1,40 @@
+
+UIViewController
+
+@property(readonly, nonatomic) NSArray *storyboardSegueTemplates;
+
+- (id)segueForUnwindingToViewController:(id)arg1 fromViewController:(id)arg2 identifier:(id)arg3;
+
+- (void)prepareForSegue:(id)arg1 sender:(id)arg2;
+- (_Bool)shouldPerformSegueWithIdentifier:(id)arg1 sender:(id)arg2;
+
+- (void)performSegueWithIdentifier:(id)arg1 sender:(id)arg2;
+- (id)_segueTemplateWithIdentifier:(id)arg1;
+
+
+/* implementation
+
+- (void)performSegueWithIdentifier:(id)arg1 sender:(id)arg2 {
+	s = [self _segueTemplateWithIdentifier:arg1];
+	if (s) {
+		[s _perform:sender];
+	} else { 
+	[NSException exceptionWithName:NSInvalidArgumentException reason:[NSString stringWithFormat:@"Receiver (%@) has no segue with identifier '%@'", self, arg1] userInfo:nil];
+	}
+}
+
+- (id)_segueTemplateWithIdentifier:(id)arg1 {
+	t = [self storyboardSegueTemplates];
+	for (id tt in t) {
+		if ([tt isEqualToString:arg1]) {
+			return tt;
+		}
+	}
+}
+
+*/
+
+
+UINavigationController
+- (id)segueForUnwindingToViewController:(id)arg1 fromViewController:(id)arg2 identifier:(id)arg3;
+- (id)viewControllerForUnwindSegueAction:(SEL)arg1 fromViewController:(id)arg2 withSender:(id)arg3;

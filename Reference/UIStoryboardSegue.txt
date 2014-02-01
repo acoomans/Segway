@@ -1,0 +1,91 @@
+
+
+@interface UIStoryboardSegue : NSObject
+{
+	NSString *_identifier;
+	id _sourceViewController;
+	id _destinationViewController;
+	CDUnknownBlockType _performHandler;
+}
++ (id)segueWithIdentifier:(id)arg1 source:(id)arg2 destination:(id)arg3 performHandler:(CDUnknownBlockType)arg4;
+@property(copy, nonatomic) CDUnknownBlockType performHandler; // @synthesize performHandler=_performHandler;
+@property(readonly, nonatomic) id destinationViewController; // @synthesize destinationViewController=_destinationViewController;
+@property(readonly, nonatomic) id sourceViewController; // @synthesize sourceViewController=_sourceViewController;
+@property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
+- (void)perform;
+- (id)initWithIdentifier:(id)arg1 source:(id)arg2 destination:(id)arg3;
+- (void)dealloc;
+@end
+
+
+__attribute__((visibility("hidden")))
+@interface UIStoryboardPushSegue : UIStoryboardSegue
+{
+	long long _destinationContainmentContext;
+	long long _splitViewControllerIndex;
+}
+@property(nonatomic) long long splitViewControllerIndex; // @synthesize splitViewControllerIndex=_splitViewControllerIndex;
+@property(nonatomic) long long destinationContainmentContext; // @synthesize destinationContainmentContext=_destinationContainmentContext;
+- (void)perform;
+@end
+
+
+__attribute__((visibility("hidden")))
+@interface UIStoryboardReplaceSegue : UIStoryboardSegue
+{
+	long long _destinationContainmentContext;
+	long long _splitViewControllerIndex;
+}
+@property(nonatomic) long long splitViewControllerIndex; // @synthesize splitViewControllerIndex=_splitViewControllerIndex;
+@property(nonatomic) long long destinationContainmentContext; // @synthesize destinationContainmentContext=_destinationContainmentContext;
+- (void)perform;
+@end
+
+
+__attribute__((visibility("hidden")))
+@interface UIStoryboardModalSegue : UIStoryboardSegue
+{
+	_Bool _useDefaultModalPresentationStyle;
+	_Bool _useDefaultModalTransitionStyle;
+	_Bool _animates;
+	long long _modalPresentationStyle;
+	long long _modalTransitionStyle;
+}
+@property(nonatomic) _Bool animates; // @synthesize animates=_animates;
+@property(nonatomic) long long modalTransitionStyle; // @synthesize modalTransitionStyle=_modalTransitionStyle;
+@property(nonatomic) long long modalPresentationStyle; // @synthesize modalPresentationStyle=_modalPresentationStyle;
+@property(nonatomic) _Bool useDefaultModalTransitionStyle; // @synthesize useDefaultModalTransitionStyle=_useDefaultModalTransitionStyle;
+@property(nonatomic) _Bool useDefaultModalPresentationStyle; // @synthesize useDefaultModalPresentationStyle=_useDefaultModalPresentationStyle;
+- (void)perform;
+@end
+
+
+@interface UIStoryboardPopoverSegue : UIStoryboardSegue
+{
+	UIPopoverController *_popoverController;
+	NSArray *_passthroughViews;
+	unsigned long long _permittedArrowDirections;
+	UIView *_anchorView;
+	UIBarButtonItem *_anchorBarButtonItem;
+	struct CGRect _anchorRect;
+}
+@property(nonatomic, setter=_setAnchorRect:) struct CGRect _anchorRect; // @synthesize _anchorRect;
+@property(retain, nonatomic, setter=_setAnchorBarButtonItem:) UIBarButtonItem *_anchorBarButtonItem; // @synthesize _anchorBarButtonItem;
+@property(retain, nonatomic, setter=_setAnchorView:) UIView *_anchorView; // @synthesize _anchorView;
+@property(nonatomic, setter=_setPermittedArrowDirections:) unsigned long long _permittedArrowDirections; // @synthesize _permittedArrowDirections;
+@property(copy, nonatomic, setter=_setPassthroughViews:) NSArray *_passthroughViews; // @synthesize _passthroughViews;
+- (void)perform;
+@property(readonly, nonatomic) UIPopoverController *popoverController; // @synthesize popoverController=_popoverController;
+- (void)dealloc;
+@end
+
+
+__attribute__((visibility("hidden")))
+@interface UIStoryboardEmbedSegue : UIStoryboardSegue
+{
+	UIView *_containerView;
+}
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
+- (void)perform;
+- (void)dealloc;
+@end
