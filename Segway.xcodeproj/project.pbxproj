@@ -22,6 +22,8 @@
 		51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */; };
 		51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C80189DEAD80062D7AD /* Default.storyboard */; };
 		51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */; };
+		51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */; };
+		51DE6C8D189E02F30062D7AD /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C8C189E02F30062D7AD /* Navigation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		51DE6C80189DEAD80062D7AD /* Default.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
 		51DE6C83189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACStoryboardSegueTemplates.h"; sourceTree = "<group>"; };
 		51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACStoryboardSegueTemplates.m"; sourceTree = "<group>"; };
+		51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTests.m; sourceTree = "<group>"; };
+		51DE6C8C189E02F30062D7AD /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */,
+				51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				51DE6C80189DEAD80062D7AD /* Default.storyboard */,
+				51DE6C8C189E02F30062D7AD /* Navigation.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE6C8D189E02F30062D7AD /* Navigation.storyboard in Resources */,
 				51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */,
 				51DE6C58189C743E0062D7AD /* InfoPlist.strings in Resources */,
 			);
@@ -322,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */,
 				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
