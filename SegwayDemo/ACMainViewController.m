@@ -30,6 +30,8 @@
     // Segues are defined programmatically here
     
     [self registerClass:ACStoryboardPushSegue.class forSegueIdentifier:@"push" destinationViewControllerIdentifier:@"destinationViewController"];
+    
+    [self registerClass:ACStoryboardModalSegue.class forSegueIdentifier:@"modal" destinationViewControllerIdentifier:@"destinationViewController"];
 }
 
 #pragma mark - View management

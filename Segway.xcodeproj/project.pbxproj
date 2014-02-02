@@ -35,6 +35,9 @@
 		51DE6CC8189E077D0062D7AD /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6CC7189E077D0062D7AD /* ACMainViewController.m */; };
 		51DE6CCE189E12450062D7AD /* ACDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6CCD189E12450062D7AD /* ACDestinationViewController.m */; };
 		51DE6CD2189E17360062D7AD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
+		51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */; };
+		51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */; };
+		51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,11 @@
 		51DE6CC7189E077D0062D7AD /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
 		51DE6CCC189E12450062D7AD /* ACDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDestinationViewController.h; sourceTree = "<group>"; };
 		51DE6CCD189E12450062D7AD /* ACDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDestinationViewController.m; sourceTree = "<group>"; };
+		51DE6D14189E19D10062D7AD /* ACStoryboardModalSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegueTemplate.h; sourceTree = "<group>"; };
+		51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTemplate.m; sourceTree = "<group>"; };
+		51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegue.h; sourceTree = "<group>"; };
+		51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegue.m; sourceTree = "<group>"; };
+		51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +239,8 @@
 				51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */,
 				51DE6C73189C87440062D7AD /* ACStoryboardPushSegueTemplate.h */,
 				51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */,
+				51DE6D14189E19D10062D7AD /* ACStoryboardModalSegueTemplate.h */,
+				51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 				51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */,
 				51DE6C70189C80ED0062D7AD /* ACStoryboardPushSegue.h */,
 				51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */,
+				51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */,
+				51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -251,6 +263,7 @@
 			children = (
 				51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */,
 				51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */,
+				51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -365,7 +378,7 @@
 				ORGANIZATIONNAME = "Arnaud Coomans";
 				TargetAttributes = {
 					51DE6C49189C743D0062D7AD = {
-						TestTargetID = 51DE6C91189E068E0062D7AD;
+						TestTargetID = 51DE6C39189C743D0062D7AD;
 					};
 				};
 			};
@@ -417,10 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
 				51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */,
+				51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */,
 				51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +446,7 @@
 			files = (
 				51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */,
 				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
+				51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +597,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -601,7 +616,6 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -610,7 +624,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -626,7 +639,6 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

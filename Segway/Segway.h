@@ -10,6 +10,8 @@
 
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardPushSegueTemplate.h"
+#import "ACStoryboardModalSegueTemplate.h"
 
 #import "ACStoryboardSegue.h"
 #import "ACStoryboardPushSegue.h"
+#import "ACStoryboardModalSegue.h"
