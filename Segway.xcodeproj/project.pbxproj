@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C43189C743D0062D7AD /* Segway.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE6C42189C743D0062D7AD /* Segway.h */; };
-		51DE6C45189C743D0062D7AD /* Segway.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C44189C743D0062D7AD /* Segway.m */; };
 		51DE6C4C189C743D0062D7AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C4B189C743D0062D7AD /* XCTest.framework */; };
 		51DE6C4D189C743E0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C4F189C743E0062D7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C4E189C743E0062D7AD /* UIKit.framework */; };
 		51DE6C52189C743E0062D7AD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
 		51DE6C58189C743E0062D7AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C56189C743E0062D7AD /* InfoPlist.strings */; };
-		51DE6C5A189C743E0062D7AD /* SegwayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C59189C743E0062D7AD /* SegwayTests.m */; };
+		51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */; };
+		51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */; };
+		51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */; };
+		51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */; };
+		51DE6C7B189DD8960062D7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C7A189DD8960062D7AD /* UIKit.framework */; };
+		51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */; };
+		51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C80189DEAD80062D7AD /* Default.storyboard */; };
+		51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,17 +52,28 @@
 		51DE6C3D189C743D0062D7AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51DE6C41189C743D0062D7AD /* Segway-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Segway-Prefix.pch"; sourceTree = "<group>"; };
 		51DE6C42189C743D0062D7AD /* Segway.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Segway.h; sourceTree = "<group>"; };
-		51DE6C44189C743D0062D7AD /* Segway.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Segway.m; sourceTree = "<group>"; };
 		51DE6C4A189C743D0062D7AD /* SegwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DE6C4B189C743D0062D7AD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		51DE6C4E189C743E0062D7AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		51DE6C55189C743E0062D7AD /* SegwayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegwayTests-Info.plist"; sourceTree = "<group>"; };
 		51DE6C57189C743E0062D7AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		51DE6C59189C743E0062D7AD /* SegwayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegwayTests.m; sourceTree = "<group>"; };
 		51DE6C64189C74A40062D7AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		51DE6C65189C74A40062D7AD /* UIStoryboardTemplate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIStoryboardTemplate.txt; sourceTree = "<group>"; };
 		51DE6C66189C74A40062D7AD /* UIViewController.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIViewController.txt; sourceTree = "<group>"; };
 		51DE6C67189C75540062D7AD /* UIStoryboardSegue.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIStoryboardSegue.txt; sourceTree = "<group>"; };
+		51DE6C69189C75E10062D7AD /* ACStoryboardSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardSegueTemplate.h; sourceTree = "<group>"; };
+		51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTemplate.m; sourceTree = "<group>"; };
+		51DE6C6D189C78440062D7AD /* ACStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardSegue.h; sourceTree = "<group>"; };
+		51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegue.m; sourceTree = "<group>"; };
+		51DE6C70189C80ED0062D7AD /* ACStoryboardPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPushSegue.h; sourceTree = "<group>"; };
+		51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegue.m; sourceTree = "<group>"; };
+		51DE6C73189C87440062D7AD /* ACStoryboardPushSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPushSegueTemplate.h; sourceTree = "<group>"; };
+		51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTemplate.m; sourceTree = "<group>"; };
+		51DE6C7A189DD8960062D7AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTests.m; sourceTree = "<group>"; };
+		51DE6C80189DEAD80062D7AD /* Default.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
+		51DE6C83189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACStoryboardSegueTemplates.h"; sourceTree = "<group>"; };
+		51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACStoryboardSegueTemplates.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE6C7B189DD8960062D7AD /* UIKit.framework in Frameworks */,
 				51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +123,7 @@
 		51DE6C3C189C743D0062D7AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51DE6C7A189DD8960062D7AD /* UIKit.framework */,
 				51DE6C3D189C743D0062D7AD /* Foundation.framework */,
 				51DE6C4B189C743D0062D7AD /* XCTest.framework */,
 				51DE6C4E189C743E0062D7AD /* UIKit.framework */,
@@ -115,8 +134,10 @@
 		51DE6C3F189C743D0062D7AD /* Segway */ = {
 			isa = PBXGroup;
 			children = (
+				51DE6C82189DEDBA0062D7AD /* ViewController */,
+				51DE6C68189C75C90062D7AD /* SegueTemplates */,
+				51DE6C6C189C78270062D7AD /* Segue */,
 				51DE6C42189C743D0062D7AD /* Segway.h */,
-				51DE6C44189C743D0062D7AD /* Segway.m */,
 				51DE6C40189C743D0062D7AD /* Supporting Files */,
 			);
 			path = Segway;
@@ -133,7 +154,8 @@
 		51DE6C53189C743E0062D7AD /* SegwayTests */ = {
 			isa = PBXGroup;
 			children = (
-				51DE6C59189C743E0062D7AD /* SegwayTests.m */,
+				51DE6C7C189DE92B0062D7AD /* SegueTemplates */,
+				51DE6C7F189DEAC20062D7AD /* Storyboards */,
 				51DE6C54189C743E0062D7AD /* Supporting Files */,
 			);
 			path = SegwayTests;
@@ -157,6 +179,53 @@
 				51DE6C67189C75540062D7AD /* UIStoryboardSegue.txt */,
 			);
 			path = Reference;
+			sourceTree = "<group>";
+		};
+		51DE6C68189C75C90062D7AD /* SegueTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				51DE6C69189C75E10062D7AD /* ACStoryboardSegueTemplate.h */,
+				51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */,
+				51DE6C73189C87440062D7AD /* ACStoryboardPushSegueTemplate.h */,
+				51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */,
+			);
+			path = SegueTemplates;
+			sourceTree = "<group>";
+		};
+		51DE6C6C189C78270062D7AD /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				51DE6C6D189C78440062D7AD /* ACStoryboardSegue.h */,
+				51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */,
+				51DE6C70189C80ED0062D7AD /* ACStoryboardPushSegue.h */,
+				51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		51DE6C7C189DE92B0062D7AD /* SegueTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */,
+			);
+			path = SegueTemplates;
+			sourceTree = "<group>";
+		};
+		51DE6C7F189DEAC20062D7AD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				51DE6C80189DEAD80062D7AD /* Default.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		51DE6C82189DEDBA0062D7AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				51DE6C83189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.h */,
+				51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */,
 				51DE6C58189C743E0062D7AD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DE6C45189C743D0062D7AD /* Segway.m in Sources */,
+				51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */,
+				51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */,
+				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
+				51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */,
+				51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DE6C5A189C743E0062D7AD /* SegwayTests.m in Sources */,
+				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +458,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SegwayTests/SegwayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -401,6 +481,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Segway/Segway-Prefix.pch";
 				INFOPLIST_FILE = "SegwayTests/SegwayTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};

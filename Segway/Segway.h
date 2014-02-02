@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "UIViewController+ACStoryboardSegueTemplates.h"
 
-@interface Segway : NSObject
+#import "ACStoryboardSegueTemplate.h"
+#import "ACStoryboardPushSegueTemplate.h"
 
-@end
+#import "ACStoryboardSegue.h"
+#import "ACStoryboardPushSegue.h"
