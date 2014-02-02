@@ -29,9 +29,9 @@
     
     // Segues are defined programmatically here
     
-    [self registerClass:ACStoryboardPushSegue.class forSegueIdentifier:@"push" destinationViewControllerIdentifier:@"destinationViewController"];
+    [self registerTemplate:ACStoryboardPushSegueTemplate.class forSegueIdentifier:@"push" destinationViewControllerIdentifier:@"destinationViewController"];
     
-    [self registerClass:ACStoryboardModalSegue.class forSegueIdentifier:@"modal" destinationViewControllerIdentifier:@"destinationViewController"];
+    [self registerTemplate:ACStoryboardModalSegueTemplate.class forSegueIdentifier:@"modal" destinationViewControllerIdentifier:@"destinationViewController"];
 }
 
 #pragma mark - View management

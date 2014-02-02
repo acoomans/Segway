@@ -21,9 +21,10 @@
 - (void)ac_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender;
 
 
+//TODO: change "add" to "register"?
 - (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate; // ac addition
 
-- (void)registerClass:(Class)segueClass
+- (void)registerTemplate:(Class)templateClass
    forSegueIdentifier:(NSString*)identifier
 destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier; // ac addition
 

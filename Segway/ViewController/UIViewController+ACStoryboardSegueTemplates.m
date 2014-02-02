@@ -50,12 +50,11 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
     self.ac_storyboardSegueTemplates = [self.ac_storyboardSegueTemplates arrayByAddingObject:segueTemplate];
 }
 
-- (void)registerClass:(Class)segueClass
+- (void)registerTemplate:(Class)templateClass
    forSegueIdentifier:(NSString*)identifier
 destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
-    ACStoryboardSegueTemplate *segueTemplate = [[ACStoryboardSegueTemplate alloc] initWithIdentifier:identifier
-                                                                 destinationViewControllerIdentifier:destinationViewControllerIdentifier
-                                                                                      segueClassName:NSStringFromClass(segueClass)];
+    ACStoryboardSegueTemplate *segueTemplate = [[templateClass alloc] initWithIdentifier:identifier
+                                                     destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     [self addSegueTemplate:segueTemplate];
 }
 

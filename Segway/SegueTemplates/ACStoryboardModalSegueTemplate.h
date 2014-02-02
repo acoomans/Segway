@@ -16,9 +16,4 @@
 @property (nonatomic) BOOL useDefaultModalTransitionStyle;
 @property (nonatomic) BOOL useDefaultModalPresentationStyle;
 
-- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier segueClassName:(NSString*)segueClassName; // ac addition
-
-- (id)segueWithDestinationViewController:(id)arg1;
-- (id)defaultSegueClassName;
-
 @end

@@ -18,14 +18,16 @@
 
 - (void)testRegisterAndPerform {
     
-    //UIWindow *window = [[UIWindow alloc] init];
+    // we need a window or presenting modally won't work
+    UIWindow *window = [[UIWindow alloc] init];
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Default" bundle:[NSBundle bundleForClass:self.class]];
     UIViewController *viewControllerA = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerA"];
-    //window.rootViewController = viewControllerA;
-    //[window makeKeyAndVisible];
     
-    [viewControllerA registerClass:ACStoryboardModalSegue.class
+    window.rootViewController = viewControllerA;
+    [window makeKeyAndVisible];
+    
+    [viewControllerA registerTemplate:ACStoryboardModalSegueTemplate.class
                 forSegueIdentifier:@"segueIdentifier"
 destinationViewControllerIdentifier:@"viewControllerB"];
     

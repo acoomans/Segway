@@ -13,9 +13,17 @@
 
 static NSDictionary *testResult;
 
-@interface ACStoryboardTestSegue : UIStoryboardSegue
+@interface ACStoryboardTestSegueTemplate : ACStoryboardSegueTemplate
+@property (nonatomic, copy) NSString *defaultSegueClassName;
+@end
+@implementation ACStoryboardTestSegueTemplate
+- (NSString*)defaultSegueClassName {
+    return @"ACStoryboardTestSegue";
+}
 @end
 
+@interface ACStoryboardTestSegue : ACStoryboardSegue
+@end
 @implementation ACStoryboardTestSegue
 - (void)perform {
     __weak __block id weakSelf = self;
@@ -40,9 +48,8 @@ static NSDictionary *testResult;
     UIViewController *viewControllerA = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerA"];
     UIViewController *viewControllerB = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerB"];
     
-    ACStoryboardSegueTemplate *segueTemplate = [[ACStoryboardSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
-                                                                 destinationViewControllerIdentifier:@"viewControllerB"
-                                                                                      segueClassName:NSStringFromClass(ACStoryboardSegue.class)];
+    ACStoryboardTestSegueTemplate *segueTemplate = [[ACStoryboardTestSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+                                                                         destinationViewControllerIdentifier:@"viewControllerB"];
     [viewControllerA addSegueTemplate:segueTemplate];
     
     ACStoryboardSegue *segue = [segueTemplate segueWithDestinationViewController:viewControllerB];
@@ -56,9 +63,8 @@ static NSDictionary *testResult;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Default" bundle:[NSBundle bundleForClass:self.class]];
     UIViewController *viewControllerA = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerA"];
     
-    ACStoryboardSegueTemplate *segueTemplate = [[ACStoryboardSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
-                                                                 destinationViewControllerIdentifier:@"viewControllerB"
-                                                                                      segueClassName:NSStringFromClass(ACStoryboardTestSegue.class)];
+    ACStoryboardTestSegueTemplate *segueTemplate = [[ACStoryboardTestSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+                                                                         destinationViewControllerIdentifier:@"viewControllerB"];
     [viewControllerA addSegueTemplate:segueTemplate];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
@@ -74,7 +80,7 @@ static NSDictionary *testResult;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Default" bundle:[NSBundle bundleForClass:self.class]];
     UIViewController *viewControllerA = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerA"];
     
-    [viewControllerA registerClass:ACStoryboardTestSegue.class forSegueIdentifier:@"segueIdentifier" destinationViewControllerIdentifier:@"viewControllerB"];
+    [viewControllerA registerTemplate:ACStoryboardTestSegueTemplate.class forSegueIdentifier:@"segueIdentifier" destinationViewControllerIdentifier:@"viewControllerB"];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
     

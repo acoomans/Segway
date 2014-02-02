@@ -12,15 +12,10 @@
 @implementation ACStoryboardSegueTemplate
 
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
-    return [self initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier segueClassName:nil];
-}
-
-- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier segueClassName:(NSString*)segueClassName {
     self = [super init];
     if (self) {
         _identifier = identifier;
         _destinationViewControllerIdentifier = destinationViewControllerIdentifier;
-        _segueClassName = segueClassName;
     }
     return self;
 }
@@ -61,9 +56,6 @@
 }
 
 - (NSString*)defaultSegueClassName {
-    if (self.segueClassName) {
-        return self.segueClassName;
-    }
     return nil;
 }
 
@@ -81,7 +73,7 @@
 #pragma mark - description
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"%@ (%@) %@ (%@)", [super description], self.identifier, self.segueClassName, self.destinationViewControllerIdentifier];
+    return [NSString stringWithFormat:@"%@ (%@) %@ (%@)", [super description], self.identifier, self.defaultSegueClassName, self.destinationViewControllerIdentifier];
 }
 
 @end

@@ -19,7 +19,7 @@
         self.destinationViewController.modalTransitionStyle = self.modalTransitionStyle;
     }
     
-    // UIKit uses the deprecated presentViewController:animated:, we'll use the newer method
+    // UIKit uses the deprecated presentViewController:animated:, we use the newer method
     [self.sourceViewController presentViewController:self.destinationViewController animated:self.animates completion:nil];
 }
 

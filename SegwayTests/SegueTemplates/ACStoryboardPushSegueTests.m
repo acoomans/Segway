@@ -23,7 +23,7 @@
     UIViewController *viewControllerA = navigationController.topViewController;
     NSAssert([viewControllerA.title isEqualToString:@"A"] == YES, @"viewControllerA is not the root view controller");
     
-    [viewControllerA registerClass:ACStoryboardPushSegue.class
+    [viewControllerA registerTemplate:ACStoryboardPushSegueTemplate.class
                 forSegueIdentifier:@"pushSegueIdentifier"
 destinationViewControllerIdentifier:@"viewControllerB"];
     

@@ -14,12 +14,9 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
 @implementation ACStoryboardModalSegueTemplate
 
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
-    return [self initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier segueClassName:nil];
-}
-
-- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier segueClassName:(NSString*)segueClassName {
-    self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier segueClassName:segueClassName];
+    self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
+        _animates = YES;
         _useDefaultModalPresentationStyle = YES;
         _useDefaultModalTransitionStyle = YES;
         _modalPresentationStyle = UIModalPresentationFullScreen;
@@ -27,7 +24,6 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
     }
     return self;
 }
-
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardModalSegue *modalSegue = (ACStoryboardModalSegue*)[super segueWithDestinationViewController:destinationViewController];
@@ -41,6 +37,17 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
 
 - (NSString*)defaultSegueClassName {
     return ACStoryboardModalSegueTemplateDefaultSegueClassName;
+}
+
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder*)encoder {
+    // TODO
+}
+
+- (id)initWithCoder:(NSCoder*)decoder {
+    // TODO
+    return nil;
 }
 
 @end

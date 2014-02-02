@@ -25,12 +25,7 @@
 @property (readonly, nonatomic, copy) NSString *identifier;
 @property (readonly, nonatomic, copy) NSString *destinationViewControllerIdentifier;
 
-@property (readonly, nonatomic, copy) NSString *segueClassName;
-
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier;
-
-
-- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier segueClassName:(NSString*)segueClassName; // ac addition
 
 - (void)perform:(id)sender;
 - (void)_perform:(id)sender;
