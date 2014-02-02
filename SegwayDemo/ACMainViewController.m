@@ -32,6 +32,10 @@
     [self registerTemplate:ACStoryboardPushSegueTemplate.class forSegueIdentifier:@"push" destinationViewControllerIdentifier:@"destinationViewController"];
     
     [self registerTemplate:ACStoryboardModalSegueTemplate.class forSegueIdentifier:@"modal" destinationViewControllerIdentifier:@"destinationViewController"];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        [self addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
+    }
 }
 
 #pragma mark - View management

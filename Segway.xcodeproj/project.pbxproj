@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */; };
+		5120B721189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */; };
+		5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */; };
+		5120B727189E4593009BB589 /* ACStoryboardPopoverSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */; };
 		51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C43189C743D0062D7AD /* Segway.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE6C42189C743D0062D7AD /* Segway.h */; };
 		51DE6C4C189C743D0062D7AD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C4B189C743D0062D7AD /* XCTest.framework */; };
@@ -64,6 +68,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		5120B71F189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegueTemplate.h; sourceTree = "<group>"; };
+		5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTemplate.m; sourceTree = "<group>"; };
+		5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+SelfRetained.h"; sourceTree = "<group>"; };
+		5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+SelfRetained.m"; sourceTree = "<group>"; };
+		5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTests.m; sourceTree = "<group>"; };
 		51DE6C3A189C743D0062D7AD /* libSegway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegway.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DE6C3D189C743D0062D7AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51DE6C41189C743D0062D7AD /* Segway-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Segway-Prefix.pch"; sourceTree = "<group>"; };
@@ -241,6 +252,8 @@
 				51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */,
 				51DE6D14189E19D10062D7AD /* ACStoryboardModalSegueTemplate.h */,
 				51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */,
+				5120B71F189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.h */,
+				5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -254,6 +267,10 @@
 				51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */,
 				51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */,
 				51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */,
+				5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */,
+				5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */,
+				5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */,
+				5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -264,6 +281,7 @@
 				51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */,
 				51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */,
 				51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */,
+				5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -436,7 +454,10 @@
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */,
 				51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */,
+				5120B721189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m in Sources */,
+				5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */,
 				51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */,
+				5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +467,7 @@
 			files = (
 				51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */,
 				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
+				5120B727189E4593009BB589 /* ACStoryboardPopoverSegueTests.m in Sources */,
 				51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,8 +679,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SegwayDemo/SegwayDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -673,8 +697,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SegwayDemo/SegwayDemo-Prefix.pch";
 				INFOPLIST_FILE = "SegwayDemo/SegwayDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -698,6 +724,7 @@
 				51DE6C5F189C743E0062D7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DE6C60189C743E0062D7AD /* Build configuration list for PBXNativeTarget "SegwayTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +733,7 @@
 				51DE6C62189C743E0062D7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DE6CBD189E068F0062D7AD /* Build configuration list for PBXNativeTarget "SegwayDemo" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +742,7 @@
 				51DE6CBF189E068F0062D7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
