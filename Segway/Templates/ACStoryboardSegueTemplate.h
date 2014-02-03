@@ -25,12 +25,13 @@
 @property (readonly, nonatomic, copy) NSString *identifier;
 
 @property (readonly, nonatomic, copy) NSString *destinationViewControllerIdentifier;
-@property (readonly, nonatomic, copy) NSString *destinationViewControllerClassName; // ac addition
-@property (readonly, nonatomic, copy) NSString *destinationViewControllerNibName; // ac addition
-@property (readonly, nonatomic, copy) NSBundle *destinationViewControllerBundle; // ac addition
+
+@property (readonly, nonatomic, copy) NSString *destinationClassName;
+@property (readonly, nonatomic, copy) NSString *destinationNibName;
+@property (readonly, nonatomic, copy) NSBundle *destinationBundle;
 
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier;
-- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle; // ac addition
+- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 - (void)perform:(id)sender;
 - (void)_perform:(id)sender;

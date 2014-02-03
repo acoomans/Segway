@@ -13,6 +13,8 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
 
 @implementation ACStoryboardModalSegueTemplate
 
+#pragma mark - Initialization
+
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
@@ -24,6 +26,8 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
     }
     return self;
 }
+
+#pragma mark - Perform segue
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardModalSegue *modalSegue = (ACStoryboardModalSegue*)[super segueWithDestinationViewController:destinationViewController];

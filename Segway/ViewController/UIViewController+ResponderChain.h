@@ -10,7 +10,7 @@
 
 @interface UIViewController (ResponderChain)
 
-- (UIViewController*)ac_nextViewControllerInResponderChain;
-- (BOOL)ac_isViewController;
+- (UIViewController*)ac_nextViewControllerInResponderChain;     // _nextViewControllerInResponderChain
+- (BOOL)ac_isViewController;                                    // _isViewController
 
 @end

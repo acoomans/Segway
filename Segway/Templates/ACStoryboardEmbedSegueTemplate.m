@@ -13,6 +13,8 @@ static NSString * const ACStoryboardEmbedSegueTemplateDefaultSegueClassName = @"
 
 @implementation ACStoryboardEmbedSegueTemplate
 
+#pragma mark - Initialization
+
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier containerView:(UIView*)containerView {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
@@ -32,6 +34,8 @@ destinationViewControllerClassName:(NSString *)className
     }
     return self;
 }
+
+#pragma mark - Perform segue
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardEmbedSegue *embedSegue = (ACStoryboardEmbedSegue*)[super segueWithDestinationViewController:destinationViewController];

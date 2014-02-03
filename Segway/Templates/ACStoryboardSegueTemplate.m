@@ -11,11 +11,16 @@
 
 @implementation ACStoryboardSegueTemplate
 
+#pragma mark - Initialization
+
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
     self = [super init];
     if (self) {
         _identifier = identifier;
         _destinationViewControllerIdentifier = destinationViewControllerIdentifier;
+        _destinationClassName = nil;
+        _destinationNibName = nil;
+        _destinationBundle = nil;
     }
     return self;
 }
@@ -24,14 +29,15 @@
     self = [super init];
     if (self) {
         _identifier = identifier;
-        _destinationViewControllerClassName = className;
-        _destinationViewControllerNibName = nibName;
+        _destinationViewControllerIdentifier = nil;
+        _destinationClassName = className;
+        _destinationNibName = nibName;
+        _destinationBundle = bundle;
     }
     return self;
 }
 
-#pragma mark -
-
+#pragma mark - Perform segue
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
 	Class class = [self effectiveSegueClass];
@@ -55,12 +61,9 @@
     
     // ac addition
     if (!viewController) {
-        Class class = NSClassFromString(self.destinationViewControllerClassName);
-        viewController = [[class alloc] initWithNibName:self.destinationViewControllerNibName bundle:self.destinationViewControllerBundle];
+        Class class = NSClassFromString(self.destinationClassName);
+        viewController = [[class alloc] initWithNibName:self.destinationNibName bundle:self.destinationBundle];
     }
-    
-    // TODO: instanciate with Nib
-    // TODO: instanciate class
 
     ACStoryboardSegue *storyboardSegue = [self segueWithDestinationViewController:viewController];
 	[self.viewController prepareForSegue:(UIStoryboardSegue*)storyboardSegue sender:sender];
@@ -68,6 +71,7 @@
 }
 
 - (Class)effectiveSegueClass {
+    //TODO implement _segueClassName for custom segues (subclassing)
     return NSClassFromString(self.defaultSegueClassName);
 }
 

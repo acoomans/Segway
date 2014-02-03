@@ -18,6 +18,8 @@
 
 @implementation ACStoryboardPopoverSegue
 
+#pragma mark - Properties
+
 - (UIPopoverController*)popoverController {
     
     if (!_popoverController) {
@@ -29,6 +31,8 @@
     }
     return _popoverController;
 }
+
+#pragma mark - Perform segue
 
 - (void)perform {
     

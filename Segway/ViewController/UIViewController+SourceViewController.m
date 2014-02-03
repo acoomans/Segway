@@ -17,14 +17,20 @@ static char const * const UIViewControllerModalSourceViewControllerKey = "UIView
 
 @implementation UIViewController (SourceViewController)
 
+#pragma mark - Load
+
 + (void)load {
-    MethodSwizzle(self, @selector(presentViewController:animated:completion:), @selector(ac_presentViewController:animated:completion:));
+    MethodSwizzle(self, @selector(presentViewController:animated:completion:), @selector(ac_override_presentViewController:animated:completion:));
 }
 
-- (void)ac_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
+#pragma mark - Presenting a modal view controller
+
+- (void)ac_override_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
     viewControllerToPresent.ac_modalSourceViewController = self;
-    [self ac_presentViewController:viewControllerToPresent animated:flag completion:completion];
+    [self ac_override_presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
+
+#pragma mark - Properties
 
 - (UIViewController*)ac_sourceViewControllerIfPresentedViaPopoverSegue {
     return objc_getAssociatedObject(self, UIViewControllerSourceViewControllerIfPresentedViaPopoverSegueKey);

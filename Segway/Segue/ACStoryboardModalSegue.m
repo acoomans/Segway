@@ -10,6 +10,8 @@
 
 @implementation ACStoryboardModalSegue
 
+#pragma mark - Perform segue
+
 - (void)perform {
     if (!self.useDefaultModalPresentationStyle) {
         self.destinationViewController.modalPresentationStyle = self.modalPresentationStyle;

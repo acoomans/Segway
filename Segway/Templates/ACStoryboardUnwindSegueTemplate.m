@@ -14,6 +14,8 @@
 
 @implementation ACStoryboardUnwindSegueTemplate
 
+#pragma mark - Initialization
+
 - (instancetype)initWithIdentifier:(NSString*)identifier action:(NSString *)action {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:nil];
     if (self) {
@@ -21,6 +23,8 @@
     }
     return self;
 }
+
+#pragma mark - Perform segue
 
 - (void)_perform:(id)sender {
     

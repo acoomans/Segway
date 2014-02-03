@@ -13,6 +13,8 @@ static NSString * const ACStoryboardEmbedSegueTemplateDefaultSegueClassName = @"
 
 @implementation ACStoryboardPopoverSegueTemplate
 
+#pragma mark - Initialization
+
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
@@ -84,6 +86,7 @@ destinationViewControllerClassName:(NSString *)className
     return self;
 }
 
+#pragma mark - Perform segue
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardPopoverSegue *popoverSegue = (ACStoryboardPopoverSegue*)[super segueWithDestinationViewController:destinationViewController];

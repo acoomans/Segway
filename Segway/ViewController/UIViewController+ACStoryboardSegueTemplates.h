@@ -13,20 +13,20 @@
 
 @interface UIViewController (ACStoryboardSegueTemplates)
 
-@property (nonatomic, copy) NSArray *ac_storyboardSegueTemplates;
+@property (nonatomic, copy) NSArray *ac_storyboardSegueTemplates;                           // storyboardSegueTemplates
 
-- (ACStoryboardSegueTemplate*)ac_segueTemplateWithIdentifier:(NSString*)identifier;
+- (ACStoryboardSegueTemplate*)ac_segueTemplateWithIdentifier:(NSString*)identifier;         // _segueTemplateWithIdentifier:
 
 // Note: this method is swizzled with the original performSegueWithIdentifier:sender:
-- (void)ac_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender;
+- (void)ac_override_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender;
 
 
 //TODO: change "add" to "register"?
-- (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate; // ac addition
+- (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
 
 - (void)registerTemplate:(Class)templateClass
    forSegueIdentifier:(NSString*)identifier
-destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier; // ac addition
+destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier;
 
 - (void)registerTemplate:(Class)templateClass
       forSegueIdentifier:(NSString*)identifier

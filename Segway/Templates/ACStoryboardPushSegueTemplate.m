@@ -13,7 +13,6 @@ static NSString * const ACStoryboardPushSegueTemplateDefaultSegueClassName = @"A
 
 @implementation ACStoryboardPushSegueTemplate
 
-
 //- (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController // call super and use context (not implemented)
 
 - (NSString*)defaultSegueClassName {

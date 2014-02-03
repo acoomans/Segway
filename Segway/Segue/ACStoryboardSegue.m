@@ -10,6 +10,8 @@
 
 @implementation ACStoryboardSegue
 
+#pragma mark - Initialzation
+
 + (instancetype)segueWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination performHandler:(void (^)(void))performHandler {
     ACStoryboardSegue *storyboardSegue = [[self alloc] initWithIdentifier:identifier source:source destination:destination];
     storyboardSegue.performHandler = performHandler;
@@ -26,7 +28,7 @@
     return self;
 }
 
-#pragma mark - 
+#pragma mark - Perform segue
 
 - (void)perform {
     if (self.performHandler) {
