@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */; };
-		5120B721189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */; };
 		5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */; };
-		5120B727189E4593009BB589 /* ACStoryboardPopoverSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */; };
+		51230F35189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F2C189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m */; };
+		51230F36189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F2E189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m */; };
+		51230F37189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F30189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m */; };
+		51230F38189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F32189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m */; };
+		51230F39189F33CC0086BAAD /* ACStoryboardSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F34189F33CC0086BAAD /* ACStoryboardSegueTemplate.m */; };
+		51230F40189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3B189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m */; };
+		51230F41189F33FE0086BAAD /* ACStoryboardModalSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3C189F33FE0086BAAD /* ACStoryboardModalSegueTests.m */; };
+		51230F42189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */; };
+		51230F43189F33FE0086BAAD /* ACStoryboardPushSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */; };
+		51230F44189F33FE0086BAAD /* ACStoryboardSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3F189F33FE0086BAAD /* ACStoryboardSegueTests.m */; };
 		5185C24E189F2DBD007B8265 /* ACContainerSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */; };
 		51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C43189C743D0062D7AD /* Segway.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE6C42189C743D0062D7AD /* Segway.h */; };
@@ -19,15 +27,11 @@
 		51DE6C4F189C743E0062D7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C4E189C743E0062D7AD /* UIKit.framework */; };
 		51DE6C52189C743E0062D7AD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
 		51DE6C58189C743E0062D7AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C56189C743E0062D7AD /* InfoPlist.strings */; };
-		51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */; };
 		51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */; };
 		51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */; };
-		51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */; };
 		51DE6C7B189DD8960062D7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C7A189DD8960062D7AD /* UIKit.framework */; };
-		51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */; };
 		51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C80189DEAD80062D7AD /* Default.storyboard */; };
 		51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */; };
-		51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */; };
 		51DE6C8D189E02F30062D7AD /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C8C189E02F30062D7AD /* Navigation.storyboard */; };
 		51DE6C93189E068E0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C95189E068E0062D7AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C94189E068E0062D7AD /* CoreGraphics.framework */; };
@@ -40,12 +44,8 @@
 		51DE6CC8189E077D0062D7AD /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6CC7189E077D0062D7AD /* ACMainViewController.m */; };
 		51DE6CCE189E12450062D7AD /* ACDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6CCD189E12450062D7AD /* ACDestinationViewController.m */; };
 		51DE6CD2189E17360062D7AD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
-		51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */; };
 		51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */; };
-		51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */; };
 		51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */; };
-		51E421AE189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */; };
-		51E421B0189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */; };
 		51E421B2189F1494003FEFD3 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E421B1189F1494003FEFD3 /* Container.storyboard */; };
 		51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */; };
 /* End PBXBuildFile section */
@@ -76,11 +76,23 @@
 /* Begin PBXFileReference section */
 		5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegue.m; sourceTree = "<group>"; };
-		5120B71F189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegueTemplate.h; sourceTree = "<group>"; };
-		5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTemplate.m; sourceTree = "<group>"; };
 		5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+SelfRetained.h"; sourceTree = "<group>"; };
 		5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+SelfRetained.m"; sourceTree = "<group>"; };
-		5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTests.m; sourceTree = "<group>"; };
+		51230F2B189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegueTemplate.h; sourceTree = "<group>"; };
+		51230F2C189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTemplate.m; sourceTree = "<group>"; };
+		51230F2D189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegueTemplate.h; sourceTree = "<group>"; };
+		51230F2E189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTemplate.m; sourceTree = "<group>"; };
+		51230F2F189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegueTemplate.h; sourceTree = "<group>"; };
+		51230F30189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTemplate.m; sourceTree = "<group>"; };
+		51230F31189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPushSegueTemplate.h; sourceTree = "<group>"; };
+		51230F32189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTemplate.m; sourceTree = "<group>"; };
+		51230F33189F33CC0086BAAD /* ACStoryboardSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardSegueTemplate.h; sourceTree = "<group>"; };
+		51230F34189F33CC0086BAAD /* ACStoryboardSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTemplate.m; sourceTree = "<group>"; };
+		51230F3B189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTests.m; sourceTree = "<group>"; };
+		51230F3C189F33FE0086BAAD /* ACStoryboardModalSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTests.m; sourceTree = "<group>"; };
+		51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTests.m; sourceTree = "<group>"; };
+		51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTests.m; sourceTree = "<group>"; };
+		51230F3F189F33FE0086BAAD /* ACStoryboardSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTests.m; sourceTree = "<group>"; };
 		5185C24C189F2DBD007B8265 /* ACContainerSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContainerSourceViewController.h; sourceTree = "<group>"; };
 		5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContainerSourceViewController.m; sourceTree = "<group>"; };
 		51DE6C3A189C743D0062D7AD /* libSegway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegway.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,20 +108,14 @@
 		51DE6C65189C74A40062D7AD /* UIStoryboardTemplate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIStoryboardTemplate.txt; sourceTree = "<group>"; };
 		51DE6C66189C74A40062D7AD /* UIViewController.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIViewController.txt; sourceTree = "<group>"; };
 		51DE6C67189C75540062D7AD /* UIStoryboardSegue.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIStoryboardSegue.txt; sourceTree = "<group>"; };
-		51DE6C69189C75E10062D7AD /* ACStoryboardSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardSegueTemplate.h; sourceTree = "<group>"; };
-		51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTemplate.m; sourceTree = "<group>"; };
 		51DE6C6D189C78440062D7AD /* ACStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardSegue.h; sourceTree = "<group>"; };
 		51DE6C6E189C78440062D7AD /* ACStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegue.m; sourceTree = "<group>"; };
 		51DE6C70189C80ED0062D7AD /* ACStoryboardPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPushSegue.h; sourceTree = "<group>"; };
 		51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegue.m; sourceTree = "<group>"; };
-		51DE6C73189C87440062D7AD /* ACStoryboardPushSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPushSegueTemplate.h; sourceTree = "<group>"; };
-		51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTemplate.m; sourceTree = "<group>"; };
 		51DE6C7A189DD8960062D7AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTests.m; sourceTree = "<group>"; };
 		51DE6C80189DEAD80062D7AD /* Default.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
 		51DE6C83189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ACStoryboardSegueTemplates.h"; sourceTree = "<group>"; };
 		51DE6C84189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ACStoryboardSegueTemplates.m"; sourceTree = "<group>"; };
-		51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTests.m; sourceTree = "<group>"; };
 		51DE6C8C189E02F30062D7AD /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		51DE6C92189E068E0062D7AD /* SegwayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegwayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DE6C94189E068E0062D7AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,16 +131,10 @@
 		51DE6CC7189E077D0062D7AD /* ACMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
 		51DE6CCC189E12450062D7AD /* ACDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDestinationViewController.h; sourceTree = "<group>"; };
 		51DE6CCD189E12450062D7AD /* ACDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDestinationViewController.m; sourceTree = "<group>"; };
-		51DE6D14189E19D10062D7AD /* ACStoryboardModalSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegueTemplate.h; sourceTree = "<group>"; };
-		51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTemplate.m; sourceTree = "<group>"; };
 		51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegue.h; sourceTree = "<group>"; };
 		51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegue.m; sourceTree = "<group>"; };
-		51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTests.m; sourceTree = "<group>"; };
 		51E421A9189F0951003FEFD3 /* ACStoryboardEmbedSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegue.h; sourceTree = "<group>"; };
 		51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegue.m; sourceTree = "<group>"; };
-		51E421AC189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegueTemplate.h; sourceTree = "<group>"; };
-		51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTemplate.m; sourceTree = "<group>"; };
-		51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTests.m; sourceTree = "<group>"; };
 		51E421B1189F1494003FEFD3 /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
 		51E421B3189F242B003FEFD3 /* UIViewController+Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Popover.h"; sourceTree = "<group>"; };
 		51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Popover.m"; sourceTree = "<group>"; };
@@ -175,12 +175,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51230F2A189F33CC0086BAAD /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				51230F33189F33CC0086BAAD /* ACStoryboardSegueTemplate.h */,
+				51230F34189F33CC0086BAAD /* ACStoryboardSegueTemplate.m */,
+				51230F31189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.h */,
+				51230F32189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m */,
+				51230F2D189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.h */,
+				51230F2E189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m */,
+				51230F2F189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.h */,
+				51230F30189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m */,
+				51230F2B189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.h */,
+				51230F2C189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		51230F3A189F33FE0086BAAD /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				51230F3F189F33FE0086BAAD /* ACStoryboardSegueTests.m */,
+				51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */,
+				51230F3C189F33FE0086BAAD /* ACStoryboardModalSegueTests.m */,
+				51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */,
+				51230F3B189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
 		51DE6C31189C743D0062D7AD = {
 			isa = PBXGroup;
 			children = (
+				51DE6C63189C74A40062D7AD /* Reference */,
 				51DE6C3F189C743D0062D7AD /* Segway */,
 				51DE6C53189C743E0062D7AD /* SegwayTests */,
-				51DE6C63189C74A40062D7AD /* Reference */,
 				51DE6C97189E068E0062D7AD /* SegwayDemo */,
 				51DE6C3C189C743D0062D7AD /* Frameworks */,
 				51DE6C3B189C743D0062D7AD /* Products */,
@@ -214,7 +243,7 @@
 			children = (
 				51DE6C42189C743D0062D7AD /* Segway.h */,
 				51DE6C82189DEDBA0062D7AD /* ViewController */,
-				51DE6C68189C75C90062D7AD /* SegueTemplates */,
+				51230F2A189F33CC0086BAAD /* Templates */,
 				51DE6C6C189C78270062D7AD /* Segue */,
 				51DE6C40189C743D0062D7AD /* Supporting Files */,
 			);
@@ -232,7 +261,7 @@
 		51DE6C53189C743E0062D7AD /* SegwayTests */ = {
 			isa = PBXGroup;
 			children = (
-				51DE6C7C189DE92B0062D7AD /* SegueTemplates */,
+				51230F3A189F33FE0086BAAD /* Segues */,
 				51DE6C7F189DEAC20062D7AD /* Storyboards */,
 				51DE6C54189C743E0062D7AD /* Supporting Files */,
 			);
@@ -259,23 +288,6 @@
 			path = Reference;
 			sourceTree = "<group>";
 		};
-		51DE6C68189C75C90062D7AD /* SegueTemplates */ = {
-			isa = PBXGroup;
-			children = (
-				51DE6C69189C75E10062D7AD /* ACStoryboardSegueTemplate.h */,
-				51DE6C6A189C75E10062D7AD /* ACStoryboardSegueTemplate.m */,
-				51DE6C73189C87440062D7AD /* ACStoryboardPushSegueTemplate.h */,
-				51DE6C74189C87440062D7AD /* ACStoryboardPushSegueTemplate.m */,
-				51DE6D14189E19D10062D7AD /* ACStoryboardModalSegueTemplate.h */,
-				51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */,
-				5120B71F189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.h */,
-				5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */,
-				51E421AC189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.h */,
-				51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */,
-			);
-			path = SegueTemplates;
-			sourceTree = "<group>";
-		};
 		51DE6C6C189C78270062D7AD /* Segue */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,18 +307,6 @@
 				51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */,
 			);
 			path = Segue;
-			sourceTree = "<group>";
-		};
-		51DE6C7C189DE92B0062D7AD /* SegueTemplates */ = {
-			isa = PBXGroup;
-			children = (
-				51DE6C7D189DE94D0062D7AD /* ACStoryboardSegueTests.m */,
-				51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */,
-				51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */,
-				5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */,
-				51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */,
-			);
-			path = SegueTemplates;
 			sourceTree = "<group>";
 		};
 		51DE6C7F189DEAC20062D7AD /* Storyboards */ = {
@@ -475,18 +475,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51230F38189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */,
 				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
-				51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
-				51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */,
+				51230F39189F33CC0086BAAD /* ACStoryboardSegueTemplate.m in Sources */,
 				51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */,
-				51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */,
-				5120B721189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m in Sources */,
-				51E421AE189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m in Sources */,
+				51230F35189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m in Sources */,
+				51230F36189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m in Sources */,
 				5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */,
 				51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */,
+				51230F37189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m in Sources */,
 				5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,11 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DE6C8B189E025B0062D7AD /* ACStoryboardPushSegueTests.m in Sources */,
-				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
-				5120B727189E4593009BB589 /* ACStoryboardPopoverSegueTests.m in Sources */,
-				51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */,
-				51E421B0189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m in Sources */,
+				51230F43189F33FE0086BAAD /* ACStoryboardPushSegueTests.m in Sources */,
+				51230F44189F33FE0086BAAD /* ACStoryboardSegueTests.m in Sources */,
+				51230F41189F33FE0086BAAD /* ACStoryboardModalSegueTests.m in Sources */,
+				51230F42189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m in Sources */,
+				51230F40189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
