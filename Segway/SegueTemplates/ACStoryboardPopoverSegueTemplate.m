@@ -9,7 +9,7 @@
 #import "ACStoryboardPopoverSegueTemplate.h"
 #import "ACStoryboardPopoverSegue.h"
 
-static NSString * const ACStoryboardPopoverSegueTemplateDefaultSegueClassName = @"ACStoryboardPopoverSegue";
+static NSString * const ACStoryboardEmbedSegueTemplateDefaultSegueClassName = @"ACStoryboardPopoverSegue";
 
 @implementation ACStoryboardPopoverSegueTemplate
 
@@ -66,7 +66,7 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
 }
 
 - (NSString*)defaultSegueClassName {
-        return ACStoryboardPopoverSegueTemplateDefaultSegueClassName;
+        return ACStoryboardEmbedSegueTemplateDefaultSegueClassName;
 }
 
 #pragma mark - NSCoding

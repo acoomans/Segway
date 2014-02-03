@@ -42,6 +42,7 @@
 		51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */; };
 		51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */; };
 		51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */; };
+		51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegue.h; sourceTree = "<group>"; };
 		51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegue.m; sourceTree = "<group>"; };
 		51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTests.m; sourceTree = "<group>"; };
+		51E421B3189F242B003FEFD3 /* UIViewController+Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Popover.h"; sourceTree = "<group>"; };
+		51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Popover.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +274,8 @@
 				5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */,
 				5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */,
 				5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */,
+				51E421B3189F242B003FEFD3 /* UIViewController+Popover.h */,
+				51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */,
 				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
 				51DE6C75189C87440062D7AD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */,
