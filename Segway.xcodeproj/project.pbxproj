@@ -42,6 +42,10 @@
 		51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */; };
 		51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */; };
 		51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */; };
+		51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */; };
+		51E421AE189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */; };
+		51E421B0189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */; };
+		51E421B2189F1494003FEFD3 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E421B1189F1494003FEFD3 /* Container.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,12 @@
 		51DE6D17189E1B010062D7AD /* ACStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardModalSegue.h; sourceTree = "<group>"; };
 		51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegue.m; sourceTree = "<group>"; };
 		51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardModalSegueTests.m; sourceTree = "<group>"; };
+		51E421A9189F0951003FEFD3 /* ACStoryboardEmbedSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegue.h; sourceTree = "<group>"; };
+		51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegue.m; sourceTree = "<group>"; };
+		51E421AC189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegueTemplate.h; sourceTree = "<group>"; };
+		51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTemplate.m; sourceTree = "<group>"; };
+		51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegueTests.m; sourceTree = "<group>"; };
+		51E421B1189F1494003FEFD3 /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +264,8 @@
 				51DE6D15189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m */,
 				5120B71F189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.h */,
 				5120B720189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m */,
+				51E421AC189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.h */,
+				51E421AD189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -271,6 +283,8 @@
 				5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */,
 				5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */,
 				5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */,
+				51E421A9189F0951003FEFD3 /* ACStoryboardEmbedSegue.h */,
+				51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */,
 			);
 			path = Segue;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 				51DE6C8A189E025B0062D7AD /* ACStoryboardPushSegueTests.m */,
 				51DE6D1A189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m */,
 				5120B726189E4593009BB589 /* ACStoryboardPopoverSegueTests.m */,
+				51E421AF189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m */,
 			);
 			path = SegueTemplates;
 			sourceTree = "<group>";
@@ -291,6 +306,7 @@
 			children = (
 				51DE6C80189DEAD80062D7AD /* Default.storyboard */,
 				51DE6C8C189E02F30062D7AD /* Navigation.storyboard */,
+				51E421B1189F1494003FEFD3 /* Container.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -427,6 +443,7 @@
 			files = (
 				51DE6C8D189E02F30062D7AD /* Navigation.storyboard in Resources */,
 				51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */,
+				51E421B2189F1494003FEFD3 /* Container.storyboard in Resources */,
 				51DE6C58189C743E0062D7AD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,8 +470,10 @@
 				51DE6C85189DEDBA0062D7AD /* UIViewController+ACStoryboardSegueTemplates.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51DE6C6B189C75E10062D7AD /* ACStoryboardSegueTemplate.m in Sources */,
+				51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */,
 				51DE6D16189E19D10062D7AD /* ACStoryboardModalSegueTemplate.m in Sources */,
 				5120B721189E39DE009BB589 /* ACStoryboardPopoverSegueTemplate.m in Sources */,
+				51E421AE189F1222003FEFD3 /* ACStoryboardEmbedSegueTemplate.m in Sources */,
 				5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */,
 				51DE6C6F189C78440062D7AD /* ACStoryboardSegue.m in Sources */,
 				5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */,
@@ -469,6 +488,7 @@
 				51DE6C7E189DE94D0062D7AD /* ACStoryboardSegueTests.m in Sources */,
 				5120B727189E4593009BB589 /* ACStoryboardPopoverSegueTests.m in Sources */,
 				51DE6D1B189E1FCF0062D7AD /* ACStoryboardModalSegueTests.m in Sources */,
+				51E421B0189F1389003FEFD3 /* ACStoryboardEmbedSegueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
