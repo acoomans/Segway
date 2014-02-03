@@ -7,7 +7,22 @@
 //
 
 #import "ACDestinationViewController.h"
+#import "Segway.h"
 
 @implementation ACDestinationViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Unwind segue is defined programmatically here
+    [self addSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
+    
+}
+
+#pragma mark - actions
+
+- (IBAction)unwindAction:(id)sender {
+    [self performSegueWithIdentifier:@"unwind" sender:self];
+}
 
 @end
