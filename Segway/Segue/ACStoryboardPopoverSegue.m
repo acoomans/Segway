@@ -9,6 +9,7 @@
 #import "ACStoryboardPopoverSegue.h"
 //#import "UIPopoverController+SelfRetained.h"
 #import "UIViewController+Popover.h"
+#import "UIViewController+SourceViewController.h"
 
 
 @interface ACStoryboardPopoverSegue ()
@@ -32,7 +33,8 @@
 - (void)perform {
     
     self.sourceViewController.popoverViewController = self.popoverController;
-    //[self.destinationViewController _setSourceViewControllerIfPresentedViaPopoverSegue:self.sourceViewController]; // not available
+    
+    [self.destinationViewController ac_setSourceViewControllerIfPresentedViaPopoverSegue:self.sourceViewController];
     
     if (self.anchorBarButtonItem) {
         [self.popoverController presentPopoverFromBarButtonItem:self.anchorBarButtonItem permittedArrowDirections:self.permittedArrowDirections animated:YES];

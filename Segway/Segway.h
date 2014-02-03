@@ -14,6 +14,7 @@
 #import "ACStoryboardModalSegueTemplate.h"
 #import "ACStoryboardPopoverSegueTemplate.h"
 #import "ACStoryboardEmbedSegueTemplate.h"
+#import "ACStoryboardUnwindSegueTemplate.h"
 
 #import "ACStoryboardSegue.h"
 #import "ACStoryboardPushSegue.h"
