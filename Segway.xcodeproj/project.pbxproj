@@ -19,6 +19,7 @@
 		51230F42189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */; };
 		51230F43189F33FE0086BAAD /* ACStoryboardPushSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */; };
 		51230F44189F33FE0086BAAD /* ACStoryboardSegueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F3F189F33FE0086BAAD /* ACStoryboardSegueTests.m */; };
+		51230F59189F70160086BAAD /* swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F58189F70160086BAAD /* swizzling.m */; };
 		5185C24E189F2DBD007B8265 /* ACContainerSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */; };
 		51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C43189C743D0062D7AD /* Segway.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE6C42189C743D0062D7AD /* Segway.h */; };
@@ -93,6 +94,8 @@
 		51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegueTests.m; sourceTree = "<group>"; };
 		51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegueTests.m; sourceTree = "<group>"; };
 		51230F3F189F33FE0086BAAD /* ACStoryboardSegueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardSegueTests.m; sourceTree = "<group>"; };
+		51230F57189F70160086BAAD /* swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swizzling.h; sourceTree = "<group>"; };
+		51230F58189F70160086BAAD /* swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swizzling.m; sourceTree = "<group>"; };
 		5185C24C189F2DBD007B8265 /* ACContainerSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContainerSourceViewController.h; sourceTree = "<group>"; };
 		5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContainerSourceViewController.m; sourceTree = "<group>"; };
 		51DE6C3A189C743D0062D7AD /* libSegway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegway.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +248,8 @@
 				51DE6C82189DEDBA0062D7AD /* ViewController */,
 				51230F2A189F33CC0086BAAD /* Templates */,
 				51DE6C6C189C78270062D7AD /* Segue */,
+				51230F57189F70160086BAAD /* swizzling.h */,
+				51230F58189F70160086BAAD /* swizzling.m */,
 				51DE6C40189C743D0062D7AD /* Supporting Files */,
 			);
 			path = Segway;
@@ -482,6 +487,7 @@
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51230F39189F33CC0086BAAD /* ACStoryboardSegueTemplate.m in Sources */,
 				51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */,
+				51230F59189F70160086BAAD /* swizzling.m in Sources */,
 				51230F35189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m in Sources */,
 				51230F36189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m in Sources */,
 				5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */,

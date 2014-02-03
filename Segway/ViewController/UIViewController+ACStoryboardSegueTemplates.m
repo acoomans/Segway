@@ -10,17 +10,8 @@
 #import <objc/runtime.h>
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardSegue.h"
+#import "swizzling.h"
 
-
-void __attribute__((weak)) MethodSwizzle(Class c, SEL origSEL, SEL overrideSEL) {
-    Method origMethod = class_getInstanceMethod(c, origSEL);
-    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
-    if (class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-    } else {
-        method_exchangeImplementations(origMethod, overrideMethod);
-    }
-}
 
 static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerSegueTemplates";
 
