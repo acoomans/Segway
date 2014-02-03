@@ -79,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		51160856189FA0BE009BD6FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+SelfRetained.h"; sourceTree = "<group>"; };
@@ -224,6 +225,7 @@
 		51DE6C31189C743D0062D7AD = {
 			isa = PBXGroup;
 			children = (
+				51160856189FA0BE009BD6FD /* README.md */,
 				51DE6C63189C74A40062D7AD /* Reference */,
 				51DE6C3F189C743D0062D7AD /* Segway */,
 				51DE6C53189C743E0062D7AD /* SegwayTests */,
