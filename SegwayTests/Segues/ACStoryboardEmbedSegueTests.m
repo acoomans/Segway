@@ -11,11 +11,11 @@
 #import "ACStoryboardEmbedSegueTemplate.h"
 #import "ACStoryboardEmbedSegue.h"
 
-@interface ACViewController : UIViewController
+@interface ACContainerViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @end
 
-@implementation ACViewController
+@implementation ACContainerViewController
 @end
 
 
@@ -29,7 +29,7 @@
     UIWindow *window = [[UIWindow alloc] init];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Container" bundle:[NSBundle bundleForClass:self.class]];
-    ACViewController *viewControllerA = [storyboard instantiateInitialViewController];
+    ACContainerViewController *viewControllerA = [storyboard instantiateInitialViewController];
     
     window.rootViewController = viewControllerA;
     [window makeKeyAndVisible];
