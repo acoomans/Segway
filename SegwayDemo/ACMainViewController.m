@@ -10,6 +10,8 @@
 #import "Segway.h"
 
 
+
+
 @implementation ACMainViewController
 
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -36,6 +38,12 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         [self addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
     }
+    
+    
+    
+    // we'll demo the embed segue from ACContainerSourceViewController, just push it for now
+    [self registerTemplate:ACStoryboardPushSegueTemplate.class forSegueIdentifier:@"embed" destinationViewControllerIdentifier:@"containerSourceViewController"];
+    
 }
 
 #pragma mark - View management
