@@ -32,14 +32,11 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    // nothing special here, feel free to play around
+    NSLog(@"prepareForSegue:%@ sender:%@", segue, sender);
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    
     //NOTE: is only called by storyboard actions, but not called by performSegueWithIdentifier:sender: (following Apple's implementation)
-    
     return YES;
 }
 

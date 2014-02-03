@@ -10,24 +10,12 @@
 #import "Segway.h"
 
 
-
-
 @implementation ACMainViewController
 
-- (id)initWithStyle:(UITableViewStyle)style {
-    self = [super initWithStyle:style];
-    if (self) {
-        [self commonInitialization];
-    }
-    return self;
-}
+#pragma mark - View management
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self commonInitialization];
-}
-
-- (void)commonInitialization {
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     // Segues are defined programmatically here
     
@@ -39,19 +27,8 @@
         [self addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
     }
     
-    
-    
     // we'll demo the embed segue from ACContainerSourceViewController, just push it for now
     [self registerTemplate:ACStoryboardPushSegueTemplate.class forSegueIdentifier:@"embed" destinationViewControllerIdentifier:@"containerSourceViewController"];
-    
-}
-
-#pragma mark - View management
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // nothing special here, feel free to play around
 }
 
 #pragma mark - UITableViewDataSource
@@ -85,19 +62,16 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    // nothing special here, feel free to play around
+    NSLog(@"prepareForSegue:%@ sender:%@", segue, sender);
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    
     //NOTE: is only called by storyboard actions, but not called by performSegueWithIdentifier:sender: (following Apple's implementation)
-    
     return YES;
 }
 
 - (IBAction)unwindToMainViewController:(UIStoryboardSegue*)sender {
-    // come back here
+    NSLog(@"unwindToMainViewController:%@", sender);
 }
 
 @end
