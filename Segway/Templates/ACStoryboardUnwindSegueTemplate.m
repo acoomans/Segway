@@ -59,7 +59,7 @@
     }
 }
 
-- (id)_unwindExecutorForTarget:(UIViewController*)target {
+- (UIViewController*)_unwindExecutorForTarget:(UIViewController*)target {
     
     if (target.ac_modalSourceViewController) {
         return target.ac_modalSourceViewController;
@@ -72,7 +72,7 @@
     return target.parentViewController;
 }
 
-- (id)_unwindTargetForSelector:(SEL)selector withSender:(id)sender {
+- (UIViewController*)_unwindTargetForSelector:(SEL)selector withSender:(id)sender {
     
     //Note: not sure of this code
     

@@ -16,7 +16,7 @@
 
 - (void)_perform:(id)sender;
 
-- (id)_unwindExecutorForTarget:(UIViewController*)target;
-- (id)_unwindTargetForSelector:(SEL)selector withSender:(id)sender;
+- (UIViewController*)_unwindExecutorForTarget:(UIViewController*)target;
+- (UIViewController*)_unwindTargetForSelector:(SEL)selector withSender:(id)sender;
 
 @end
