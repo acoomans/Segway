@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+ACStoryboardSegueTemplates.h"
+#import "UIViewController+Popover.h"
 
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardPushSegueTemplate.h"

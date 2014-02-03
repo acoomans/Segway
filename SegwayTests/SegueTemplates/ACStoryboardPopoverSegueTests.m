@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "UIViewController+ACStoryboardSegueTemplates.h"
+#import "UIViewController+Popover.h"
 #import "ACStoryboardPopoverSegueTemplate.h"
 #import "ACStoryboardPopoverSegue.h"
 
@@ -19,32 +20,62 @@
 
 // NOT WORKING (cannot make popovers work in unit tests)
 
-/*
-- (void)testRegisterAndPerform {
+
+- (void)testRegisterAndPerformFromView {
     
-    // we need a window or presenting modally won't work
     UIWindow *window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 1024, 1024)];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Navigation" bundle:[NSBundle bundleForClass:self.class]];
-    UIViewController *viewControllerA = [storyboard instantiateViewControllerWithIdentifier:@"viewControllerA"];
+    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
     
-    window.rootViewController = viewControllerA;
+    window.rootViewController = navigationController;
     [window makeKeyAndVisible];
-    
-    UIBarButtonItem *barButtonItem = viewControllerA.navigationItem.rightBarButtonItem;
-    NSAssert(barButtonItem != nil, @"viewControllerA has no right bar button item");
-    
+
+    UIViewController *viewControllerA = navigationController.topViewController;
+    NSAssert(viewControllerA != nil, @"No top view controller present");
+    NSAssert(viewControllerA.navigationController.navigationBar != nil, @"view has no navigation bar");
     
     [viewControllerA addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
-                                                    destinationViewControllerIdentifier:@"viewControllerB"
-                                                                    anchorBarButtonItem:barButtonItem
-                                                               permittedArrowDirections:UIPopoverArrowDirectionAny]];
+                                                               destinationViewControllerIdentifier:@"viewControllerB"
+                                                                                        anchorView:viewControllerA.navigationController.navigationBar
+                                                                          permittedArrowDirections:UIPopoverArrowDirectionAny]];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
     
-    XCTAssertNotNil(viewControllerA.presentedViewController);
-    XCTAssert([viewControllerA.presentedViewController.title isEqualToString:@"B"]);
+    XCTAssertNotNil(viewControllerA.popoverViewController);
+    XCTAssert([viewControllerA.popoverViewController.contentViewController.title isEqualToString:@"B"]);
 }
-*/
+
+
+- (void)testRegisterAndPerformFromBarButtonItem {
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 1024, 1024)];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Navigation" bundle:[NSBundle bundleForClass:self.class]];
+    UINavigationController *navigationController = [storyboard instantiateInitialViewController];
+    
+    window.rootViewController = navigationController;
+    [window makeKeyAndVisible];
+    
+    UIViewController *viewControllerA = navigationController.topViewController;
+    NSAssert(viewControllerA != nil, @"No top view controller present");
+    NSAssert(viewControllerA.navigationController.navigationBar != nil, @"view has no navigation bar");
+    
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                   target:nil
+                                                                                   action:nil];
+    viewControllerA.navigationItem.rightBarButtonItem = barButtonItem;
+    NSAssert(viewControllerA.navigationItem.rightBarButtonItem != nil, @"viewControllerA has no right bar button item");
+    
+    [viewControllerA addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+                                                               destinationViewControllerIdentifier:@"viewControllerB"
+                                                                               anchorBarButtonItem:barButtonItem
+                                                                          permittedArrowDirections:UIPopoverArrowDirectionAny]];
+    
+    [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
+    
+    XCTAssertNotNil(viewControllerA.popoverViewController);
+    XCTAssert([viewControllerA.popoverViewController.contentViewController.title isEqualToString:@"B"]);
+}
 
 @end

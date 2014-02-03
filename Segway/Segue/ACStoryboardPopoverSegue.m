@@ -7,7 +7,8 @@
 //
 
 #import "ACStoryboardPopoverSegue.h"
-#import "UIPopoverController+SelfRetained.h"
+//#import "UIPopoverController+SelfRetained.h"
+#import "UIViewController+Popover.h"
 
 
 @interface ACStoryboardPopoverSegue ()
@@ -22,13 +23,15 @@
         _popoverController = [[UIPopoverController alloc] initWithContentViewController:self.destinationViewController];
         _popoverController.passthroughViews = self.passthroughViews;
         
-        self.popoverController.retainsSelfWhilePresented = YES; // hack to retain the popover (_setRetainsSelfWhilePresented in UIKit)
+        // TODO clean this
+        //self.popoverController.retainsSelfWhilePresented = YES; // hack to retain the popover (_setRetainsSelfWhilePresented in UIKit)
     }
     return _popoverController;
 }
 
 - (void)perform {
     
+    self.sourceViewController.popoverViewController = self.popoverController;
     //[self.destinationViewController _setSourceViewControllerIfPresentedViaPopoverSegue:self.sourceViewController]; // not available
     
     if (self.anchorBarButtonItem) {
