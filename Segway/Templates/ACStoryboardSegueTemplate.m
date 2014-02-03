@@ -71,7 +71,9 @@
 }
 
 - (Class)effectiveSegueClass {
-    //TODO implement _segueClassName for custom segues (subclassing)
+    if (self.segueClassName) {
+        return NSClassFromString(self.segueClassName);
+    }
     return NSClassFromString(self.defaultSegueClassName);
 }
 

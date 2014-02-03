@@ -30,6 +30,8 @@
 @property (readonly, nonatomic, copy) NSString *destinationNibName;
 @property (readonly, nonatomic, copy) NSBundle *destinationBundle;
 
+@property (nonatomic, copy) NSString *segueClassName;
+
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier;
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle;
 
