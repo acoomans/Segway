@@ -21,6 +21,18 @@ static NSString * const ACStoryboardEmbedSegueTemplateDefaultSegueClassName = @"
     return self;
 }
 
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:(NSBundle*)bundle
+                     containerView:(UIView*)containerView {
+    self = [super initWithIdentifier:identifier destinationViewControllerClassName:className withNibName:nibName bundle:bundle];
+    if (self) {
+        _containerView = containerView;
+    }
+    return self;
+}
+
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardEmbedSegue *embedSegue = (ACStoryboardEmbedSegue*)[super segueWithDestinationViewController:destinationViewController];
     embedSegue.containerView = self.containerView;

@@ -49,6 +49,18 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
     [self addSegueTemplate:segueTemplate];
 }
 
+- (void)registerTemplate:(Class)templateClass
+      forSegueIdentifier:(NSString*)identifier
+destinationViewControllerclassName:(NSString*)className
+             withNibName:(NSString*)nibName
+                  bundle:(NSBundle*)bundle {
+    ACStoryboardSegueTemplate *segueTemplate = [[templateClass alloc] initWithIdentifier:identifier
+                                                      destinationViewControllerClassName:className
+                                                                             withNibName:nibName
+                                                                                  bundle:bundle];
+    [self addSegueTemplate:segueTemplate];
+}
+
 - (ACStoryboardSegueTemplate*)ac_segueTemplateWithIdentifier:(NSString*)identifier {
 	for (ACStoryboardSegueTemplate *segueTemplate in self.ac_storyboardSegueTemplates) {
 		if ([segueTemplate.identifier isEqualToString:identifier]) {

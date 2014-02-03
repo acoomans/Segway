@@ -16,4 +16,10 @@
 destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier
                      containerView:(UIView*)containerView;
 
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:bundle
+                     containerView:(UIView*)containerView;
+
 @end

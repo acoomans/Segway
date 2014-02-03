@@ -28,4 +28,10 @@
    forSegueIdentifier:(NSString*)identifier
 destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier; // ac addition
 
+- (void)registerTemplate:(Class)templateClass
+      forSegueIdentifier:(NSString*)identifier
+destinationViewControllerclassName:(NSString*)className
+             withNibName:(NSString*)nibName
+                  bundle:(NSBundle*)bundle; // ac addition
+
 @end

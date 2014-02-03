@@ -28,5 +28,20 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
 destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier
                         anchorView:(UIView *)anchorView
           permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
+
+
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:bundle
+               anchorBarButtonItem:(UIBarButtonItem *)anchorBarButtonItem
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
+
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:bundle
+                        anchorView:(UIView *)anchorView
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections;
     
 @end

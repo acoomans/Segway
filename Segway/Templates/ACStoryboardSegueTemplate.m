@@ -20,6 +20,16 @@
     return self;
 }
 
+- (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle {
+    self = [super init];
+    if (self) {
+        _identifier = identifier;
+        _destinationViewControllerClassName = className;
+        _destinationViewControllerNibName = nibName;
+    }
+    return self;
+}
+
 #pragma mark -
 
 
@@ -41,6 +51,12 @@
     
     if (self.viewController.storyboard) {
         viewController = [self.viewController.storyboard instantiateViewControllerWithIdentifier:self.destinationViewControllerIdentifier];
+    }
+    
+    // ac addition
+    if (!viewController) {
+        Class class = NSClassFromString(self.destinationViewControllerClassName);
+        viewController = [[class alloc] initWithNibName:self.destinationViewControllerNibName bundle:self.destinationViewControllerBundle];
     }
     
     // TODO: instanciate with Nib

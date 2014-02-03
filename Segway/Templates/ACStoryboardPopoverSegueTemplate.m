@@ -52,6 +52,38 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
     return self;
 }
 
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:(NSBundle *)bundle
+               anchorBarButtonItem:(UIBarButtonItem *)anchorBarButtonItem
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
+    self = [super initWithIdentifier:identifier destinationViewControllerClassName:className withNibName:nibName bundle:bundle];
+    if (self) {
+        self.anchorView = nil;
+        self.anchorBarButtonItem = anchorBarButtonItem;
+        self.permittedArrowDirections = arrowDirections;
+        self.passthroughViews = nil;
+    }
+    return self;
+}
+
+- (instancetype)initWithIdentifier:(NSString*)identifier
+destinationViewControllerClassName:(NSString *)className
+                       withNibName:(NSString *)nibName
+                            bundle:(NSBundle *)bundle
+                        anchorView:(UIView *)anchorView
+          permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
+    self = [super initWithIdentifier:identifier destinationViewControllerClassName:className withNibName:nibName bundle:bundle];
+    if (self) {
+        self.anchorView = anchorView;
+        self.anchorBarButtonItem = nil;
+        self.permittedArrowDirections = arrowDirections;
+        self.passthroughViews = nil;
+    }
+    return self;
+}
+
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController {
     ACStoryboardPopoverSegue *popoverSegue = (ACStoryboardPopoverSegue*)[super segueWithDestinationViewController:destinationViewController];
