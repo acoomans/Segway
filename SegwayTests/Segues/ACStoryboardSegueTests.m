@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "UIViewController+ACStoryboardSegueTemplates.h"
+#import "UIViewController+StoryboardSegueTemplates.h"
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardSegue.h"
 

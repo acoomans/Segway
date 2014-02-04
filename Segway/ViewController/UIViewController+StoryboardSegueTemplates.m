@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import "UIViewController+ACStoryboardSegueTemplates.h"
+#import "UIViewController+StoryboardSegueTemplates.h"
 #import <objc/runtime.h>
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardSegue.h"
@@ -15,7 +15,7 @@
 
 static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerSegueTemplates";
 
-@implementation UIViewController (ACStoryboardSegueTemplates)
+@implementation UIViewController (StoryboardSegueTemplates)
 
 #pragma mark - Load
 

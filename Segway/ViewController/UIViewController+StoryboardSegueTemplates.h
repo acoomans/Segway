@@ -1,5 +1,5 @@
 //
-//  UIViewController+ACStoryboardSegueTemplates.h
+//  UIViewController+StoryboardSegueTemplates.h
 //  Segway
 //
 //  Created by Arnaud Coomans on 01/02/14.
@@ -11,7 +11,7 @@
 @class ACStoryboardSegueTemplate, ACStoryboardSegue;
 
 
-@interface UIViewController (ACStoryboardSegueTemplates)
+@interface UIViewController (StoryboardSegueTemplates)
 
 @property (nonatomic, copy) NSArray *ac_storyboardSegueTemplates;                           // storyboardSegueTemplates
 
