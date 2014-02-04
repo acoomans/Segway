@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import "UIViewController+ACStoryboardSegueTemplates.h"
+#import "UIViewController+StoryboardSegueTemplates.h"
 #import "UIViewController+Popover.h"
 
 #import "ACStoryboardSegueTemplate.h"
