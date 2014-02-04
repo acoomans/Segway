@@ -26,14 +26,4 @@
 //TODO: change "add" to "register"?
 - (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
 
-- (void)registerTemplate:(Class)templateClass
-   forSegueIdentifier:(NSString*)identifier
-destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier;
-
-- (void)registerTemplate:(Class)templateClass
-      forSegueIdentifier:(NSString*)identifier
-destinationViewControllerclassName:(NSString*)className
-             withNibName:(NSString*)nibName
-                  bundle:(NSBundle*)bundle;
-
 @end

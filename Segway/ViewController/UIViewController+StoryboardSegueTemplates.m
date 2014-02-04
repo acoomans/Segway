@@ -45,26 +45,6 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
     self.ac_storyboardSegueTemplates = [self.ac_storyboardSegueTemplates arrayByAddingObject:segueTemplate];
 }
 
-- (void)registerTemplate:(Class)templateClass
-   forSegueIdentifier:(NSString*)identifier
-destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
-    ACStoryboardSegueTemplate *segueTemplate = [[templateClass alloc] initWithIdentifier:identifier
-                                                     destinationViewControllerIdentifier:destinationViewControllerIdentifier];
-    [self addSegueTemplate:segueTemplate];
-}
-
-- (void)registerTemplate:(Class)templateClass
-      forSegueIdentifier:(NSString*)identifier
-destinationViewControllerclassName:(NSString*)className
-             withNibName:(NSString*)nibName
-                  bundle:(NSBundle*)bundle {
-    ACStoryboardSegueTemplate *segueTemplate = [[templateClass alloc] initWithIdentifier:identifier
-                                                      destinationViewControllerClassName:className
-                                                                             withNibName:nibName
-                                                                                  bundle:bundle];
-    [self addSegueTemplate:segueTemplate];
-}
-
 #pragma mark - Finding a template
 
 - (ACStoryboardSegueTemplate*)ac_segueTemplateWithIdentifier:(NSString*)identifier {
@@ -85,6 +65,10 @@ destinationViewControllerclassName:(NSString*)className
 	} else {
         [self ac_override_performSegueWithIdentifier:identifier sender:sender];
 	}
+}
+
+- (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo {
+    
 }
 
 @end
