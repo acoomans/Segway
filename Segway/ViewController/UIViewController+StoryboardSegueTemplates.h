@@ -20,6 +20,8 @@
 // Note: this method is swizzled with the original performSegueWithIdentifier:sender:
 - (void)ac_override_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender;
 
+//TODO: - (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo;
+
 
 //TODO: change "add" to "register"?
 - (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
@@ -32,6 +34,6 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
       forSegueIdentifier:(NSString*)identifier
 destinationViewControllerclassName:(NSString*)className
              withNibName:(NSString*)nibName
-                  bundle:(NSBundle*)bundle; // ac addition
+                  bundle:(NSBundle*)bundle;
 
 @end
