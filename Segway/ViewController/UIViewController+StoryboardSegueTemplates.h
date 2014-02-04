@@ -22,8 +22,6 @@
 
 //TODO: - (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo;
 
-
-//TODO: change "add" to "register"?
-- (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
+- (void)registerSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
 
 @end

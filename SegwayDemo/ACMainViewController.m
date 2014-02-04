@@ -19,18 +19,18 @@
     
     // Segues are defined programmatically here
     
-    [self addSegueTemplate:[[ACStoryboardPushSegueTemplate alloc] initWithIdentifier:@"push"
+    [self registerSegueTemplate:[[ACStoryboardPushSegueTemplate alloc] initWithIdentifier:@"push"
                                                  destinationViewControllerIdentifier:@"destinationViewController"]];
     
-    [self addSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"modal"
+    [self registerSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"modal"
                                                   destinationViewControllerIdentifier:@"destinationViewController"]];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        [self addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
+        [self registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
     }
     
     // we'll demo the embed segue from ACContainerSourceViewController, just push it for now
-    [self addSegueTemplate:[[ACStoryboardPushSegueTemplate alloc] initWithIdentifier:@"embed"
+    [self registerSegueTemplate:[[ACStoryboardPushSegueTemplate alloc] initWithIdentifier:@"embed"
                                                  destinationViewControllerIdentifier:@"containerSourceViewController"]];
 }
 

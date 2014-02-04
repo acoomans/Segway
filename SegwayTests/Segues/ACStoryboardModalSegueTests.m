@@ -27,7 +27,7 @@
     window.rootViewController = viewControllerA;
     [window makeKeyAndVisible];
     
-    [viewControllerA addSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+    [viewControllerA registerSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
                                                              destinationViewControllerIdentifier:@"viewControllerB"]];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];

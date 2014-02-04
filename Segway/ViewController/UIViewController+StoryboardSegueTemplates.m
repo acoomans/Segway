@@ -40,7 +40,7 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
 
 #pragma mark - Registering templates
 
-- (void)addSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate {
+- (void)registerSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate {
     segueTemplate.viewController = self;
     self.ac_storyboardSegueTemplates = [self.ac_storyboardSegueTemplates arrayByAddingObject:segueTemplate];
 }

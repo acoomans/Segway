@@ -15,7 +15,7 @@
     [super viewDidLoad];
     
     // Unwind segue is defined programmatically here
-    [self addSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
+    [self registerSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
     
 }
 

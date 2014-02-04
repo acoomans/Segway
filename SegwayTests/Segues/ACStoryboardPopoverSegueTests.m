@@ -35,7 +35,7 @@
     NSAssert(viewControllerA != nil, @"No top view controller present");
     NSAssert(viewControllerA.navigationController.navigationBar != nil, @"view has no navigation bar");
     
-    [viewControllerA addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+    [viewControllerA registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
                                                                destinationViewControllerIdentifier:@"viewControllerB"
                                                                                         anchorView:viewControllerA.navigationController.navigationBar
                                                                           permittedArrowDirections:UIPopoverArrowDirectionAny]];
@@ -67,7 +67,7 @@
     viewControllerA.navigationItem.rightBarButtonItem = barButtonItem;
     NSAssert(viewControllerA.navigationItem.rightBarButtonItem != nil, @"viewControllerA has no right bar button item");
     
-    [viewControllerA addSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+    [viewControllerA registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
                                                                destinationViewControllerIdentifier:@"viewControllerB"
                                                                                anchorBarButtonItem:barButtonItem
                                                                           permittedArrowDirections:UIPopoverArrowDirectionAny]];

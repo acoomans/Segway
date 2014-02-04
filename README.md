@@ -24,7 +24,7 @@ First import segway:
 To define a segue is a two steps process:
 
 1. Define a template, that will be responsible of creating the segue when `performSegueWithIdentifier:sender:` is called
-2. Attach the template to a view controller 
+2. Register the template with a view controller 
 
 
 Templates can either point to a view controller in a storyboard, by specifying its storyboard ID:
@@ -49,7 +49,7 @@ Note that it is recommended to initialize the templates in the `viewDidLoad` met
 
 Then attach it to the view controller:
 
-    [self addSegueTemplate:template];
+    [self registerSegueTemplate:template];
 
 ### Performing a segue
 
@@ -59,9 +59,9 @@ This is the same as UIKit's segues:
 
 ### Unwinding
 
-Like for regular segues, add a template first. The _action_ argument is a string with the name of the selector to unwind to:
+Like for regular segues, register a template first. The _action_ argument is a string with the name of the selector to unwind to:
 
-	[self addSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
+	[self registerSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
 
 You can then unwind with perform:
 

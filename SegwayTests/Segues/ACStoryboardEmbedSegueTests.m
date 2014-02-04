@@ -34,7 +34,7 @@
     window.rootViewController = viewControllerA;
     [window makeKeyAndVisible];
     
-    [viewControllerA addSegueTemplate:[[ACStoryboardEmbedSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+    [viewControllerA registerSegueTemplate:[[ACStoryboardEmbedSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
                                                              destinationViewControllerIdentifier:@"viewControllerB"
                                                                                    containerView:viewControllerA.containerView]];
     

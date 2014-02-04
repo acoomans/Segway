@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     // Embed segue is defined programmatically here
-    [self addSegueTemplate:[[ACStoryboardEmbedSegueTemplate alloc] initWithIdentifier:@"embed"
+    [self registerSegueTemplate:[[ACStoryboardEmbedSegueTemplate alloc] initWithIdentifier:@"embed"
                                                   destinationViewControllerIdentifier:@"destinationViewController"
                                                                         containerView:self.containerView]];
 }
