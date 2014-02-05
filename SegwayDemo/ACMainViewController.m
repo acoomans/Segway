@@ -9,6 +9,17 @@
 #import "ACMainViewController.h"
 #import "Segway.h"
 
+NS_ENUM(NSInteger, ACMainViewControllerSection) {
+    ACMainViewControllerSectionSegway,
+    ACMainViewControllerSectionStoryboard,
+};
+
+NS_ENUM(NSInteger, ACMainViewControllerSectionStoryboardRow) {
+    ACMainViewControllerSectionStoryboardRowPush,
+    ACMainViewControllerSectionStoryboardRowModal,
+//    ACMainViewControllerSectionStoryboardRow,
+};
+
 
 @implementation ACMainViewController
 
@@ -36,30 +47,82 @@
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.ac_storyboardSegueTemplates count];
+    switch (section) {
+        case ACMainViewControllerSectionSegway: {
+            return [self.ac_storyboardSegueTemplates count];
+        }
+            
+        case ACMainViewControllerSectionStoryboard: {
+            return 2;
+        }
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    UITableViewCell *cell = nil;
+
+    switch (indexPath.section) {
+            
+        case ACMainViewControllerSectionSegway: {
+            static NSString *cellIdentifier = @"Cell";
+            cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            }
+            
+            ACStoryboardSegueTemplate *segueTemplate = self.ac_storyboardSegueTemplates[indexPath.row];
+            cell.textLabel.text = [[NSString stringWithFormat:@"%@ segue", segueTemplate.identifier] capitalizedString];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        }
+            
+        case ACMainViewControllerSectionStoryboard: {
+            switch (indexPath.row) {
+                case ACMainViewControllerSectionStoryboardRowPush:
+                    return [tableView dequeueReusableCellWithIdentifier:@"storyboardPushCell"];
+                case ACMainViewControllerSectionStoryboardRowModal:
+                    return [tableView dequeueReusableCellWithIdentifier:@"storyboardModalCell"];
+                default:
+                    break;
+            }
+            break;
+        }
     }
     
-    ACStoryboardSegueTemplate *segueTemplate = self.ac_storyboardSegueTemplates[indexPath.row];
-    
-    cell.textLabel.text = [[NSString stringWithFormat:@"%@ segue", segueTemplate.identifier] capitalizedString];
-    
     return cell;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case ACMainViewControllerSectionSegway: {
+            return @"Segway";
+        }
+        case ACMainViewControllerSectionStoryboard: {
+            return @"Storyboard (UIKit)";
+        }
+    }
+    return nil;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ACStoryboardSegueTemplate *segueTemplate = self.ac_storyboardSegueTemplates[indexPath.row];
     
-    [self performSegueWithIdentifier:segueTemplate.identifier sender:self];
+    switch (indexPath.section) {
+        case ACMainViewControllerSectionSegway: {
+            ACStoryboardSegueTemplate *segueTemplate = self.ac_storyboardSegueTemplates[indexPath.row];
+            [self performSegueWithIdentifier:segueTemplate.identifier sender:self];
+        }
+        case ACMainViewControllerSectionStoryboard: {
+            return;
+        }
+    }
 }
 
 #pragma mark - Segues

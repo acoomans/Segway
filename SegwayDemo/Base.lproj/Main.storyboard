@@ -42,12 +42,13 @@
                             <constraint firstItem="feR-qX-maa" firstAttribute="top" secondItem="7UC-eh-9Tx" secondAttribute="bottom" constant="10" id="yw3-7N-rIL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wUV-SV-dTg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrJ-lH-EZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="154"/>
+            <point key="canvasLocation" x="859" y="154"/>
         </scene>
-        <!--Main View Controller - Segway-->
+        <!--Main View Controller - Demo-->
         <scene sceneID="MSg-Ah-85J">
             <objects>
                 <tableViewController id="Edo-Nd-qu2" customClass="ACMainViewController" sceneMemberID="viewController">
@@ -55,9 +56,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storyboardPushCell" textLabel="xYu-A0-e24" style="IBUITableViewCellStyleDefault" id="3eb-Rp-hdU">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3eb-Rp-hdU">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Push segue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xYu-A0-e24">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="94B-z0-DAC" kind="push" id="Yhz-H2-ZNT"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="storyboardModalCell" textLabel="esF-rp-DXs" style="IBUITableViewCellStyleDefault" id="GHM-8O-TUQ">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHM-8O-TUQ" id="bmd-UC-stW">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Modal segue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="esF-rp-DXs">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="94B-z0-DAC" kind="modal" id="tCd-vh-kRB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Segway" id="bT0-of-G0B"/>
+                    <navigationItem key="navigationItem" title="Demo" id="bT0-of-G0B"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBi-xK-j5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -130,4 +173,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="tCd-vh-kRB"/>
+    </inferredMetricsTieBreakers>
 </document>
