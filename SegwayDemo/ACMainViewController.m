@@ -36,6 +36,13 @@ NS_ENUM(NSInteger, ACMainViewControllerSectionStoryboardRow) {
     [self registerSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"modal"
                                                   destinationViewControllerIdentifier:@"destinationViewController"]];
     
+    // set some parameters to the template
+    ACStoryboardModalSegueTemplate *template = [[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"modal (flip transition)"
+                                                                      destinationViewControllerIdentifier:@"destinationViewController"];
+    template.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    template.useDefaultModalTransitionStyle = NO;
+    [self registerSegueTemplate:template];
+    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         [self registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"popover" destinationViewControllerIdentifier:@"destinationViewController" anchorView:self.navigationController.navigationBar permittedArrowDirections:UIPopoverArrowDirectionAny]];
     }
