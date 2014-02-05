@@ -81,7 +81,7 @@ Note: userInfo only works for ACStoryboardSegues.
 
 Like for regular segues, register a template first. The _action_ argument is a string with the name of the selector to unwind to:
 
-	[self registerSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindToMainViewController:"]];
+	[self registerSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind" action:@"unwindAction:"]];
 
 You can then unwind with perform:
 
