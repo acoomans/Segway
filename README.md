@@ -1,5 +1,3 @@
-Segway is an iOS library for segues but without storyboards.
-
 # Segway
 
 Segway is an open source implementation of iOS' segues.
@@ -39,11 +37,11 @@ or to a view controller class and Nib:
     
 Available segues are:
 
-- UIStoryboardPushSegueTemplate
-- UIStoryboardModalSegueTemplate
-- UIStoryboardPopoverSegueTemplate
-- UIStoryboardEmbedSegueTemplate
-- UIStoryboardUnwindSegueTemplate
+- ACStoryboardPushSegueTemplate
+- ACStoryboardModalSegueTemplate
+- ACStoryboardPopoverSegueTemplate
+- ACStoryboardEmbedSegueTemplate
+- ACStoryboardUnwindSegueTemplate
     
 Some templates take additional parameters (e.g. presentation options for modal segue), check the documentation for details.
  
