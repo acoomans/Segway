@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5116086018A1CF34009BD6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
+		5116086118A1CF34009BD6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C94189E068E0062D7AD /* CoreGraphics.framework */; };
+		5116086218A1CF34009BD6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C7A189DD8960062D7AD /* UIKit.framework */; };
+		5116086818A1CF34009BD6FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5116086618A1CF34009BD6FD /* InfoPlist.strings */; };
+		5116086A18A1CF34009BD6FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116086918A1CF34009BD6FD /* main.m */; };
+		5116086E18A1CF34009BD6FD /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116086D18A1CF34009BD6FD /* ACAppDelegate.m */; };
+		5116087418A1CF34009BD6FD /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116087318A1CF34009BD6FD /* ACViewController.m */; };
+		5116087618A1CF34009BD6FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5116087518A1CF34009BD6FD /* Images.xcassets */; };
+		5116088F18A1D062009BD6FD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
 		5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */; };
 		5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */; };
 		51230F35189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F2C189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m */; };
@@ -80,6 +89,16 @@
 
 /* Begin PBXFileReference section */
 		51160856189FA0BE009BD6FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5116085F18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegwayDemoWithoutStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5116086518A1CF34009BD6FD /* SegwayDemoWithoutStoryboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegwayDemoWithoutStoryboard-Info.plist"; sourceTree = "<group>"; };
+		5116086718A1CF34009BD6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5116086918A1CF34009BD6FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5116086B18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SegwayDemoWithoutStoryboard-Prefix.pch"; sourceTree = "<group>"; };
+		5116086C18A1CF34009BD6FD /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
+		5116086D18A1CF34009BD6FD /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
+		5116087218A1CF34009BD6FD /* ACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
+		5116087318A1CF34009BD6FD /* ACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
+		5116087518A1CF34009BD6FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+SelfRetained.h"; sourceTree = "<group>"; };
@@ -157,6 +176,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5116085C18A1CF34009BD6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5116088F18A1D062009BD6FD /* libSegway.a in Frameworks */,
+				5116086118A1CF34009BD6FD /* CoreGraphics.framework in Frameworks */,
+				5116086218A1CF34009BD6FD /* UIKit.framework in Frameworks */,
+				5116086018A1CF34009BD6FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51DE6C37189C743D0062D7AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,6 +221,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5116086318A1CF34009BD6FD /* SegwayDemoWithoutStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				5116086C18A1CF34009BD6FD /* ACAppDelegate.h */,
+				5116086D18A1CF34009BD6FD /* ACAppDelegate.m */,
+				5116087218A1CF34009BD6FD /* ACViewController.h */,
+				5116087318A1CF34009BD6FD /* ACViewController.m */,
+				5116087518A1CF34009BD6FD /* Images.xcassets */,
+				5116086418A1CF34009BD6FD /* Supporting Files */,
+			);
+			path = SegwayDemoWithoutStoryboard;
+			sourceTree = "<group>";
+		};
+		5116086418A1CF34009BD6FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5116086518A1CF34009BD6FD /* SegwayDemoWithoutStoryboard-Info.plist */,
+				5116086618A1CF34009BD6FD /* InfoPlist.strings */,
+				5116086918A1CF34009BD6FD /* main.m */,
+				5116086B18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		51230F2A189F33CC0086BAAD /* Templates */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +284,7 @@
 				51DE6C3F189C743D0062D7AD /* Segway */,
 				51DE6C53189C743E0062D7AD /* SegwayTests */,
 				51DE6C97189E068E0062D7AD /* SegwayDemo */,
+				5116086318A1CF34009BD6FD /* SegwayDemoWithoutStoryboard */,
 				51DE6C3C189C743D0062D7AD /* Frameworks */,
 				51DE6C3B189C743D0062D7AD /* Products */,
 			);
@@ -241,6 +296,7 @@
 				51DE6C3A189C743D0062D7AD /* libSegway.a */,
 				51DE6C4A189C743D0062D7AD /* SegwayTests.xctest */,
 				51DE6C92189E068E0062D7AD /* SegwayDemo.app */,
+				5116085F18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,6 +460,23 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		5116085E18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5116088918A1CF35009BD6FD /* Build configuration list for PBXNativeTarget "SegwayDemoWithoutStoryboard" */;
+			buildPhases = (
+				5116085B18A1CF34009BD6FD /* Sources */,
+				5116085C18A1CF34009BD6FD /* Frameworks */,
+				5116085D18A1CF34009BD6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SegwayDemoWithoutStoryboard;
+			productName = SegwayDemoWithoutStoryboard;
+			productReference = 5116085F18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard.app */;
+			productType = "com.apple.product-type.application";
+		};
 		51DE6C39189C743D0062D7AD /* Segway */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51DE6C5D189C743E0062D7AD /* Build configuration list for PBXNativeTarget "Segway" */;
@@ -466,7 +539,7 @@
 				ORGANIZATIONNAME = "Arnaud Coomans";
 				TargetAttributes = {
 					51DE6C49189C743D0062D7AD = {
-						TestTargetID = 51DE6C39189C743D0062D7AD;
+						TestTargetID = 51DE6C91189E068E0062D7AD;
 					};
 				};
 			};
@@ -485,13 +558,23 @@
 			targets = (
 				51DE6C39189C743D0062D7AD /* Segway */,
 				51DE6C49189C743D0062D7AD /* SegwayTests */,
-				51DE6C91189E068E0062D7AD /* SegwayDemo */,
 				5116085718A1ABEB009BD6FD /* Documentation */,
+				51DE6C91189E068E0062D7AD /* SegwayDemo */,
+				5116085E18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5116085D18A1CF34009BD6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5116087618A1CF34009BD6FD /* Images.xcassets in Resources */,
+				5116086818A1CF34009BD6FD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51DE6C48189C743D0062D7AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +599,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5116085B18A1CF34009BD6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5116086E18A1CF34009BD6FD /* ACAppDelegate.m in Sources */,
+				5116087418A1CF34009BD6FD /* ACViewController.m in Sources */,
+				5116086A18A1CF34009BD6FD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51DE6C36189C743D0062D7AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +669,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5116086618A1CF34009BD6FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5116086718A1CF34009BD6FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		51DE6C56189C743E0062D7AD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -632,6 +733,42 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5116088A18A1CF35009BD6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SegwayDemoWithoutStoryboard/SegwayDemoWithoutStoryboard-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SegwayDemoWithoutStoryboard/SegwayDemoWithoutStoryboard-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5116088B18A1CF35009BD6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SegwayDemoWithoutStoryboard/SegwayDemoWithoutStoryboard-Prefix.pch";
+				INFOPLIST_FILE = "SegwayDemoWithoutStoryboard/SegwayDemoWithoutStoryboard-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -733,6 +870,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -752,6 +890,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -760,6 +899,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -775,6 +915,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -827,6 +968,14 @@
 			buildConfigurations = (
 				5116085918A1ABEB009BD6FD /* Debug */,
 				5116085A18A1ABEB009BD6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5116088918A1CF35009BD6FD /* Build configuration list for PBXNativeTarget "SegwayDemoWithoutStoryboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5116088A18A1CF35009BD6FD /* Debug */,
+				5116088B18A1CF35009BD6FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
