@@ -84,12 +84,44 @@
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
-    // TODO    
+    if (self.identifier) {
+        [encoder encodeObject:self.identifier forKey:@"UIIdentifier"];
+    }
+    if (self.segueClassName) {
+        [encoder encodeObject:self.segueClassName forKey:@"UISegueClassName"];
+    }
+    if (self.destinationViewControllerIdentifier) {
+        [encoder encodeObject:self.destinationViewControllerIdentifier forKey:@"UIDestinationViewControllerIdentifier"];
+    }
+    
+    if (self.destinationClassName) {
+        [encoder encodeObject:self.destinationClassName forKey:@"UIDestinationViewControllerClassName"];
+    }
+    if (self.destinationNibName) {
+        [encoder encodeObject:self.destinationNibName forKey:@"UIDestinationViewControllerNibName"];
+    }
+    if (self.destinationBundle) {
+        [encoder encodeObject:self.destinationBundle forKey:@"UIDestinationViewControllerBundle"];
+    }
+/*    if (self.performOnViewLoad) {
+        [encoder encodeBool:YES forKey:@"UIPerformOnViewLoad"];
+    }
+*/
+    
 }
 
 - (id)initWithCoder:(NSCoder*)decoder {
-    // TODO
-    return nil;
+    self = [super init];
+    if (self) {
+        _identifier = [decoder decodeObjectForKey:@"UIIdentifier"];
+        _segueClassName = [decoder decodeObjectForKey:@"UISegueClassName"];
+        _destinationViewControllerIdentifier = [decoder decodeObjectForKey:@"UIDestinationViewControllerIdentifier"];
+        _destinationClassName = [decoder decodeObjectForKey:@"UIDestinationViewControllerClassName"];
+        _destinationNibName = [decoder decodeObjectForKey:@"UIDestinationViewControllerNibName"];
+        _destinationBundle = [decoder decodeObjectForKey:@"UIDestinationViewControllerBundle"];
+        //_performOnViewLoad = [decoder decodeBoolForKey:@"UIPerformOnViewLoad"];
+    }
+    return self;
 }
 
 #pragma mark - description

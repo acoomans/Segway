@@ -32,7 +32,7 @@
  * If you don't need special arguments in your segue subclass, you can simply use ACStoryboardSegueTemplate and give the ACStoryboardSegue subclass name to the ACStoryboardSegueTemplate's segueClassName property.
  */
 
-@interface ACStoryboardSegueTemplate : NSObject //TODO: <NSCoding>
+@interface ACStoryboardSegueTemplate : NSObject <NSCoding>
 
 /** @name Properties */
 

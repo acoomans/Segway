@@ -46,12 +46,42 @@ static NSString * const ACStoryboardModalSegueTemplateDefaultSegueClassName = @"
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
-    // TODO
+    [super encodeWithCoder:encoder];
+    
+    if (!self.useDefaultModalPresentationStyle) {
+        [encoder encodeInteger:self.modalPresentationStyle forKey:@"UIModalPresentationStyle"];
+    }
+    if (!self.useDefaultModalTransitionStyle) {
+        [encoder encodeInteger:self.modalTransitionStyle forKey:@"UIModalTransitionStyle"];
+    }
+    if (!self.animates) {
+        [encoder encodeBool:NO forKey:@"UIAnimates"];
+    }
 }
 
 - (id)initWithCoder:(NSCoder*)decoder {
-    // TODO
-    return nil;
+    self = [super initWithCoder:decoder];
+    if (self) {
+        
+        if ([decoder containsValueForKey:@"UIModalPresentationStyle"]) {
+            _modalPresentationStyle = [decoder decodeIntegerForKey:@"UIModalPresentationStyle"];
+        } else {
+            _useDefaultModalPresentationStyle = YES;
+        }
+        
+        if ([decoder containsValueForKey:@"UIModalTransitionStyle"]) {
+            _modalTransitionStyle = [decoder decodeIntegerForKey:@"UIModalTransitionStyle"];
+        } else {
+            _useDefaultModalTransitionStyle = YES;
+        }
+        
+        if ([decoder containsValueForKey:@"UIAnimates"]) {
+            _animates = [decoder decodeBoolForKey:@"UIAnimates"];
+        } else {
+            _animates = YES;
+        }
+    }
+    return self;
 }
 
 @end

@@ -50,12 +50,16 @@ destinationViewControllerClassName:(NSString *)className
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
-    // TODO
+    [super encodeWithCoder:encoder];
+    [encoder encodeObject:self.containerView forKey:@"UIContainerView"];
 }
 
 - (id)initWithCoder:(NSCoder*)decoder {
-    // TODO
-    return nil;
+    self = [super initWithCoder:decoder];
+    if (self) {
+        _containerView = [decoder decodeObjectForKey:@"UIContainerView"];
+    }
+    return self;
 }
 
 @end

@@ -102,4 +102,19 @@
     }
 }
 
+#pragma mark - NSCoding
+
+- (void)encodeWithCoder:(NSCoder*)encoder {
+    [super encodeWithCoder:encoder];
+    [encoder encodeObject:self.action forKey:@"UIAction"];
+}
+
+- (id)initWithCoder:(NSCoder*)decoder {
+    self = [super initWithCoder:decoder];
+    if (self) {
+        _action = [decoder decodeObjectForKey:@"UIAction"];
+    }
+    return self;
+}
+
 @end

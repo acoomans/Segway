@@ -18,10 +18,10 @@ static NSString * const ACStoryboardEmbedSegueTemplateDefaultSegueClassName = @"
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifier {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
-        self.anchorView = nil;
-        self.anchorBarButtonItem = nil;
-        self.permittedArrowDirections = UIPopoverArrowDirectionAny;
-        self.passthroughViews = nil;
+        _anchorView = nil;
+        _anchorBarButtonItem = nil;
+        _permittedArrowDirections = UIPopoverArrowDirectionAny;
+        _passthroughViews = nil;
     }
     return self;
 }
@@ -32,10 +32,10 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
           permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
-        self.anchorView = nil;
-        self.anchorBarButtonItem = anchorBarButtonItem;
-        self.permittedArrowDirections = arrowDirections;
-        self.passthroughViews = nil;
+        _anchorView = nil;
+        _anchorBarButtonItem = anchorBarButtonItem;
+        _permittedArrowDirections = arrowDirections;
+        _passthroughViews = nil;
     }
     return self;
 }
@@ -46,10 +46,10 @@ destinationViewControllerIdentifier:(NSString*)destinationViewControllerIdentifi
           permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
     self = [super initWithIdentifier:identifier destinationViewControllerIdentifier:destinationViewControllerIdentifier];
     if (self) {
-        self.anchorView = anchorView;
-        self.anchorBarButtonItem = nil;
-        self.permittedArrowDirections = arrowDirections;
-        self.passthroughViews = nil;
+        _anchorView = anchorView;
+        _anchorBarButtonItem = nil;
+        _permittedArrowDirections = arrowDirections;
+        _passthroughViews = nil;
     }
     return self;
 }
@@ -62,10 +62,10 @@ destinationViewControllerClassName:(NSString *)className
           permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
     self = [super initWithIdentifier:identifier destinationViewControllerClassName:className withNibName:nibName bundle:bundle];
     if (self) {
-        self.anchorView = nil;
-        self.anchorBarButtonItem = anchorBarButtonItem;
-        self.permittedArrowDirections = arrowDirections;
-        self.passthroughViews = nil;
+        _anchorView = nil;
+        _anchorBarButtonItem = anchorBarButtonItem;
+        _permittedArrowDirections = arrowDirections;
+        _passthroughViews = nil;
     }
     return self;
 }
@@ -78,10 +78,10 @@ destinationViewControllerClassName:(NSString *)className
           permittedArrowDirections:(UIPopoverArrowDirection)arrowDirections {
     self = [super initWithIdentifier:identifier destinationViewControllerClassName:className withNibName:nibName bundle:bundle];
     if (self) {
-        self.anchorView = anchorView;
-        self.anchorBarButtonItem = nil;
-        self.permittedArrowDirections = arrowDirections;
-        self.passthroughViews = nil;
+        _anchorView = anchorView;
+        _anchorBarButtonItem = nil;
+        _permittedArrowDirections = arrowDirections;
+        _passthroughViews = nil;
     }
     return self;
 }
@@ -107,12 +107,22 @@ destinationViewControllerClassName:(NSString *)className
 #pragma mark - NSCoding
 
 - (void)encodeWithCoder:(NSCoder*)encoder {
-    // TODO
+    [super encodeWithCoder:encoder];
+    [encoder encodeInteger:self.permittedArrowDirections forKey:@"UIPermittedArrowDirections"];
+    [encoder encodeObject:self.passthroughViews forKey:@"UIPassthroughViews"];
+    [encoder encodeObject:self.anchorBarButtonItem forKey:@"UIAnchorBarButtonItem"];
+    [encoder encodeObject:self.anchorView forKey:@"UIAnchorView"];
 }
 
 - (id)initWithCoder:(NSCoder*)decoder {
-    // TODO
-    return nil;
+    self = [super initWithCoder:decoder];
+    if (self) {
+        _permittedArrowDirections = [decoder decodeIntegerForKey:@"UIPermittedArrowDirections"];
+        _passthroughViews = [decoder decodeObjectForKey:@"UIPassthroughViews"];
+        _anchorBarButtonItem = [decoder decodeObjectForKey:@"UIAnchorBarButtonItem"];
+        _anchorView = [decoder decodeObjectForKey:@"UIAnchorView"];
+    }
+    return self;
 }
 
 @end
