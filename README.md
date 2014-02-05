@@ -6,6 +6,8 @@ Segway is a library that lets you perform and unwind segues programmatically (li
 
 Whether you simply like the perform/prepare segue pattern; or you want to slowly get rid of that storyboard in a project you inherited, Segway gives you more flexibility in using segues programmatically.
  
+[![Build Status](https://api.travis-ci.org/acoomans/Segway.png)](https://api.travis-ci.org/acoomans/PSegway.png)
+
 
 ## Install
 
