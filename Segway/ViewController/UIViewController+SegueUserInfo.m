@@ -8,6 +8,11 @@
 
 #import "UIViewController+SegueUserInfo.h"
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wincomplete-implementation"
+
 @implementation UIViewController (SegueUserInfo)
 
 @end
+
+#pragma GCC diagnostic pop

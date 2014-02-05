@@ -34,6 +34,7 @@
 		51230F53189F6A710086BAAD /* UIResponder+ResponderChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F52189F6A710086BAAD /* UIResponder+ResponderChain.m */; };
 		51230F56189F6D100086BAAD /* UIViewController+SourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F55189F6D100086BAAD /* UIViewController+SourceViewController.m */; };
 		51230F59189F70160086BAAD /* swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F58189F70160086BAAD /* swizzling.m */; };
+		51280A7E18A305530060D736 /* UIViewController+SegueUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51280A7D18A305530060D736 /* UIViewController+SegueUserInfo.m */; };
 		5185C24E189F2DBD007B8265 /* ACContainerSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */; };
 		51DE6C3E189C743D0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C43189C743D0062D7AD /* Segway.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 51DE6C42189C743D0062D7AD /* Segway.h */; };
@@ -131,6 +132,7 @@
 		51230F55189F6D100086BAAD /* UIViewController+SourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SourceViewController.m"; sourceTree = "<group>"; };
 		51230F57189F70160086BAAD /* swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swizzling.h; sourceTree = "<group>"; };
 		51230F58189F70160086BAAD /* swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swizzling.m; sourceTree = "<group>"; };
+		51280A7D18A305530060D736 /* UIViewController+SegueUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SegueUserInfo.m"; sourceTree = "<group>"; };
 		5185C24C189F2DBD007B8265 /* ACContainerSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACContainerSourceViewController.h; sourceTree = "<group>"; };
 		5185C24D189F2DBD007B8265 /* ACContainerSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACContainerSourceViewController.m; sourceTree = "<group>"; };
 		51DE6C3A189C743D0062D7AD /* libSegway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSegway.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,6 +405,7 @@
 				51DE6C83189DEDBA0062D7AD /* UIViewController+Segway.h */,
 				51DE6C84189DEDBA0062D7AD /* UIViewController+Segway.m */,
 				5106D26918A2343400CF9F2E /* UIViewController+SegueUserInfo.h */,
+				51280A7D18A305530060D736 /* UIViewController+SegueUserInfo.m */,
 				51230F4B189F41960086BAAD /* UIViewController+ResponderChain.h */,
 				51230F4C189F41960086BAAD /* UIViewController+ResponderChain.m */,
 				51230F51189F6A710086BAAD /* UIResponder+ResponderChain.h */,
@@ -617,6 +620,7 @@
 			files = (
 				51230F38189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
+				51280A7E18A305530060D736 /* UIViewController+SegueUserInfo.m in Sources */,
 				51DE6C85189DEDBA0062D7AD /* UIViewController+Segway.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51230F39189F33CC0086BAAD /* ACStoryboardSegueTemplate.m in Sources */,
