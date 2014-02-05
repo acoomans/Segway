@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class ACStoryboardSegue;
+
 
 // informal protocol (ie no implementation)
 
