@@ -16,8 +16,9 @@
 		5116087418A1CF34009BD6FD /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116087318A1CF34009BD6FD /* ACViewController.m */; };
 		5116087618A1CF34009BD6FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5116087518A1CF34009BD6FD /* Images.xcassets */; };
 		5116088F18A1D062009BD6FD /* libSegway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3A189C743D0062D7AD /* libSegway.a */; };
+		5116089818A21A68009BD6FD /* UIViewController+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116089718A21A68009BD6FD /* UIViewController+Popover.m */; };
 		5120B71E189E319A009BB589 /* ACStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */; };
-		5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */; };
+		5120B725189E4467009BB589 /* UIPopoverController+SelfRetained.m in Sources */ = {isa = PBXBuildFile; fileRef = 5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		51230F35189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F2C189F33CC0086BAAD /* ACStoryboardEmbedSegueTemplate.m */; };
 		51230F36189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F2E189F33CC0086BAAD /* ACStoryboardModalSegueTemplate.m */; };
 		51230F37189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51230F30189F33CC0086BAAD /* ACStoryboardPopoverSegueTemplate.m */; };
@@ -61,7 +62,6 @@
 		51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6D18189E1B010062D7AD /* ACStoryboardModalSegue.m */; };
 		51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */; };
 		51E421B2189F1494003FEFD3 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E421B1189F1494003FEFD3 /* Container.storyboard */; };
-		51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +99,8 @@
 		5116087218A1CF34009BD6FD /* ACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
 		5116087318A1CF34009BD6FD /* ACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
 		5116087518A1CF34009BD6FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5116089618A21A68009BD6FD /* UIViewController+Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Popover.h"; sourceTree = "<group>"; };
+		5116089718A21A68009BD6FD /* UIViewController+Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Popover.m"; sourceTree = "<group>"; };
 		5120B71C189E319A009BB589 /* ACStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardPopoverSegue.h; sourceTree = "<group>"; };
 		5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+SelfRetained.h"; sourceTree = "<group>"; };
@@ -171,8 +173,6 @@
 		51E421A9189F0951003FEFD3 /* ACStoryboardEmbedSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACStoryboardEmbedSegue.h; sourceTree = "<group>"; };
 		51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardEmbedSegue.m; sourceTree = "<group>"; };
 		51E421B1189F1494003FEFD3 /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
-		51E421B3189F242B003FEFD3 /* UIViewController+Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Popover.h"; sourceTree = "<group>"; };
-		51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Popover.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +271,8 @@
 				51230F3E189F33FE0086BAAD /* ACStoryboardPushSegueTests.m */,
 				51230F3C189F33FE0086BAAD /* ACStoryboardModalSegueTests.m */,
 				51230F3D189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m */,
+				5116089618A21A68009BD6FD /* UIViewController+Popover.h */,
+				5116089718A21A68009BD6FD /* UIViewController+Popover.m */,
 				51230F3B189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m */,
 			);
 			path = Segues;
@@ -378,8 +380,6 @@
 				5120B71D189E319A009BB589 /* ACStoryboardPopoverSegue.m */,
 				5120B723189E4467009BB589 /* UIPopoverController+SelfRetained.h */,
 				5120B724189E4467009BB589 /* UIPopoverController+SelfRetained.m */,
-				51E421B3189F242B003FEFD3 /* UIViewController+Popover.h */,
-				51E421B4189F242B003FEFD3 /* UIViewController+Popover.m */,
 				51E421A9189F0951003FEFD3 /* ACStoryboardEmbedSegue.h */,
 				51E421AA189F0951003FEFD3 /* ACStoryboardEmbedSegue.m */,
 			);
@@ -539,7 +539,7 @@
 				ORGANIZATIONNAME = "Arnaud Coomans";
 				TargetAttributes = {
 					51DE6C49189C743D0062D7AD = {
-						TestTargetID = 51DE6C91189E068E0062D7AD;
+						TestTargetID = 51DE6C39189C743D0062D7AD;
 					};
 				};
 			};
@@ -614,7 +614,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				51230F38189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m in Sources */,
-				51E421B5189F242B003FEFD3 /* UIViewController+Popover.m in Sources */,
 				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
 				51DE6C85189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
@@ -640,6 +639,7 @@
 			files = (
 				51230F43189F33FE0086BAAD /* ACStoryboardPushSegueTests.m in Sources */,
 				51230F44189F33FE0086BAAD /* ACStoryboardSegueTests.m in Sources */,
+				5116089818A21A68009BD6FD /* UIViewController+Popover.m in Sources */,
 				51230F41189F33FE0086BAAD /* ACStoryboardModalSegueTests.m in Sources */,
 				51230F42189F33FE0086BAAD /* ACStoryboardPopoverSegueTests.m in Sources */,
 				51230F40189F33FE0086BAAD /* ACStoryboardEmbedSegueTests.m in Sources */,
@@ -870,7 +870,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -890,7 +889,6 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -899,7 +897,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SegwayDemo.app/SegwayDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -915,7 +912,6 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

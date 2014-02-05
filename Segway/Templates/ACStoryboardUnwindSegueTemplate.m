@@ -8,7 +8,7 @@
 
 #import "ACStoryboardUnwindSegueTemplate.h"
 #import "UIViewController+ResponderChain.h"
-#import "UIViewController+Popover.h"
+#import "UIPopoverController+SelfRetained.h"
 #import "UIViewController+SourceViewController.h"
 
 

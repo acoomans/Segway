@@ -8,35 +8,53 @@
 
 #import "UIPopoverController+SelfRetained.h"
 #import <objc/runtime.h>
+#import "swizzling.h"
 
 static char const * const UIPopoverControllerRetainedSelfKey = "UIPopoverControllerRetainedSelfKey";
 
 @implementation UIPopoverController (SelfRetained)
 
+#pragma mark - Load
+
++ (void)load {
+    MethodSwizzle(self, @selector(dismissPopoverAnimated:), @selector(ac_override_dismissPopoverAnimated:));
+}
+
+#pragma mark - Properties
+
 - (BOOL)retainsSelfWhilePresented {
-    return (self.retainedSelf != nil);
+    return [objc_getAssociatedObject(self, UIPopoverControllerRetainedSelfKey) boolValue];
 }
 
 - (void)setRetainsSelfWhilePresented:(BOOL)retainsSelfWhilePresented {
-    if (retainsSelfWhilePresented) {
-        self.retainedSelf = self;
+    
+    if (retainsSelfWhilePresented && ![objc_getAssociatedObject(self, UIPopoverControllerRetainedSelfKey) boolValue]) {
+        [self retain];
         self.delegate = self;
-    } else {
-        self.retainedSelf = nil;
-        self.delegate = nil;
+        objc_setAssociatedObject(self, UIPopoverControllerRetainedSelfKey, @(retainsSelfWhilePresented), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        
+    } else if (!retainsSelfWhilePresented && [objc_getAssociatedObject(self, UIPopoverControllerRetainedSelfKey) boolValue]) {
+        [self release];
+        objc_setAssociatedObject(self, UIPopoverControllerRetainedSelfKey, @(retainsSelfWhilePresented), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 
-- (UIPopoverController*)retainedSelf {
-    return objc_getAssociatedObject(self, UIPopoverControllerRetainedSelfKey);
-}
-
-- (void)setRetainedSelf:(UIPopoverController*)retainedSelf {
-    objc_setAssociatedObject(self, UIPopoverControllerRetainedSelfKey, retainedSelf, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
+#pragma mark - UIPopoverControllerDelegate
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     self.retainsSelfWhilePresented = NO;
 }
+
+- (void)ac_override_dismissPopoverAnimated:(BOOL)animated {
+    self.retainsSelfWhilePresented = NO;
+    [self ac_override_dismissPopoverAnimated:animated];
+}
+
+/*
+- (void)dealloc {
+    [super dealloc];
+    // test if really deallocated
+}
+*/
 
 @end

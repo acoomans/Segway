@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//TODO: do something to release the popover
-
 @interface UIViewController (Popover)
 
 @property (nonatomic, strong) UIPopoverController *popoverViewController;

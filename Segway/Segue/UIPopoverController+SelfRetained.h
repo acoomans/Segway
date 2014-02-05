@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-//TODO: reimplement without ARC or any other cleaner way
-
 @interface UIPopoverController (SelfRetained) <UIPopoverControllerDelegate>
+
 @property (nonatomic, assign) BOOL retainsSelfWhilePresented;
-@property (nonatomic, strong) UIPopoverController *retainedSelf;
+
+// swizzled with dismissPopoverAnimated:
+- (void)ac_override_dismissPopoverAnimated:(BOOL)animated;
+
 @end
 
 

@@ -8,17 +8,27 @@
 
 #import <XCTest/XCTest.h>
 #import "UIViewController+StoryboardSegueTemplates.h"
-#import "UIViewController+Popover.h"
 #import "ACStoryboardPopoverSegueTemplate.h"
 #import "ACStoryboardPopoverSegue.h"
+#import "UIViewController+Popover.h"
+#import "UIPopoverController+SelfRetained.h"
+
+
+@interface ACStoryboardPopoverTestSegue : ACStoryboardPopoverSegue
+@end
+@implementation ACStoryboardPopoverTestSegue
+- (void)perform {
+    [super perform];
+    self.sourceViewController.popoverViewController = self.popoverController;
+}
+@end
+
 
 
 @interface ACStoryboardPopoverSegueTests : XCTestCase
 @end
 
 @implementation ACStoryboardPopoverSegueTests
-
-// NOT WORKING (cannot make popovers work in unit tests)
 
 
 - (void)testRegisterAndPerformFromView {
@@ -35,10 +45,12 @@
     NSAssert(viewControllerA != nil, @"No top view controller present");
     NSAssert(viewControllerA.navigationController.navigationBar != nil, @"view has no navigation bar");
     
-    [viewControllerA registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
-                                                               destinationViewControllerIdentifier:@"viewControllerB"
-                                                                                        anchorView:viewControllerA.navigationController.navigationBar
-                                                                          permittedArrowDirections:UIPopoverArrowDirectionAny]];
+    ACStoryboardPopoverSegueTemplate *template = [[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+                                                                          destinationViewControllerIdentifier:@"viewControllerB"
+                                                                                                   anchorView:viewControllerA.navigationController.navigationBar
+                                                                                     permittedArrowDirections:UIPopoverArrowDirectionAny];
+    template.segueClassName = NSStringFromClass(ACStoryboardPopoverTestSegue.class);
+    [viewControllerA registerSegueTemplate:template];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
     
@@ -67,10 +79,14 @@
     viewControllerA.navigationItem.rightBarButtonItem = barButtonItem;
     NSAssert(viewControllerA.navigationItem.rightBarButtonItem != nil, @"viewControllerA has no right bar button item");
     
-    [viewControllerA registerSegueTemplate:[[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
-                                                               destinationViewControllerIdentifier:@"viewControllerB"
-                                                                               anchorBarButtonItem:barButtonItem
-                                                                          permittedArrowDirections:UIPopoverArrowDirectionAny]];
+    
+    
+    ACStoryboardPopoverSegueTemplate *template = [[ACStoryboardPopoverSegueTemplate alloc] initWithIdentifier:@"segueIdentifier"
+                                                                          destinationViewControllerIdentifier:@"viewControllerB"
+                                                                                          anchorBarButtonItem:barButtonItem
+                                                                                     permittedArrowDirections:UIPopoverArrowDirectionAny];
+    template.segueClassName = NSStringFromClass(ACStoryboardPopoverTestSegue.class);
+    [viewControllerA registerSegueTemplate:template];
     
     [viewControllerA performSegueWithIdentifier:@"segueIdentifier" sender:self];
     

@@ -7,8 +7,7 @@
 //
 
 #import "ACStoryboardPopoverSegue.h"
-//#import "UIPopoverController+SelfRetained.h"
-#import "UIViewController+Popover.h"
+#import "UIPopoverController+SelfRetained.h"
 #import "UIViewController+SourceViewController.h"
 
 
@@ -25,9 +24,7 @@
     if (!_popoverController) {
         _popoverController = [[UIPopoverController alloc] initWithContentViewController:self.destinationViewController];
         _popoverController.passthroughViews = self.passthroughViews;
-        
-        // TODO clean this
-        //self.popoverController.retainsSelfWhilePresented = YES; // hack to retain the popover (_setRetainsSelfWhilePresented in UIKit)
+        _popoverController.retainsSelfWhilePresented = YES;
     }
     return _popoverController;
 }
@@ -35,8 +32,6 @@
 #pragma mark - Perform segue
 
 - (void)perform {
-    
-    self.sourceViewController.popoverViewController = self.popoverController;
     
     [self.destinationViewController ac_setSourceViewControllerIfPresentedViaPopoverSegue:self.sourceViewController];
     
