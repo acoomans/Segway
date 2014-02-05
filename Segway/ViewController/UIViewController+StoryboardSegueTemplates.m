@@ -59,9 +59,9 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
 #pragma mark - Performing a template
 
 - (void)ac_override_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender {
-	ACStoryboardSegueTemplate *storyboardSegue = [self ac_segueTemplateWithIdentifier:identifier];
-	if (storyboardSegue) {
-		[storyboardSegue _perform:sender];
+	ACStoryboardSegueTemplate *segueTemplate = [self ac_segueTemplateWithIdentifier:identifier];
+	if (segueTemplate) {
+		[segueTemplate _perform:sender];
 	} else {
         [self ac_override_performSegueWithIdentifier:identifier sender:sender];
 	}
