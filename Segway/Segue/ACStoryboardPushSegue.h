@@ -8,6 +8,9 @@
 
 #import "ACStoryboardSegue.h"
 
+/** A push segue.
+ */
+
 @interface ACStoryboardPushSegue : ACStoryboardSegue
 
 //@property(nonatomic) long long splitViewControllerIndex; // not implemented

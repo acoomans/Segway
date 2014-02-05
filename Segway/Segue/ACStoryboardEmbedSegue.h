@@ -8,10 +8,16 @@
 
 #import "ACStoryboardSegue.h"
 
+
+/** An embed segue.
+ */
+
 @interface ACStoryboardEmbedSegue : ACStoryboardSegue
 
-@property (nonatomic, weak) UIView *containerView;
+/** @name Properties */
 
-- (void)perform;
+/** A container view for the child view controller's view.
+ */
+@property (nonatomic, weak) UIView *containerView;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "ACStoryboardSegueTemplate.h"
 
+/** A template for push segues.
+ */
+
 @interface ACStoryboardPushSegueTemplate : ACStoryboardSegueTemplate
 
 //@property(nonatomic) long long splitViewControllerIndex; // not implemented

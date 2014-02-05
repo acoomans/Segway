@@ -386,6 +386,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		5116085718A1ABEB009BD6FD /* Documentation */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--project-name \"Segway\"\n--project-company \"Arnaud Coomans\"\n--company-id \"com.acoomans\"\n--output build\n--create-docset \n--install-docset \n--create-html \n--exit-threshold 2 \n--no-repeat-first-par \nSegway";
+			buildConfigurationList = 5116085818A1ABEB009BD6FD /* Build configuration list for PBXLegacyTarget "Documentation" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/appledoc;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Documentation;
+			passBuildSettingsInEnvironment = 1;
+			productName = Documentation;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		51DE6C39189C743D0062D7AD /* Segway */ = {
 			isa = PBXNativeTarget;
@@ -469,6 +486,7 @@
 				51DE6C39189C743D0062D7AD /* Segway */,
 				51DE6C49189C743D0062D7AD /* SegwayTests */,
 				51DE6C91189E068E0062D7AD /* SegwayDemo */,
+				5116085718A1ABEB009BD6FD /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -585,6 +603,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5116085918A1ABEB009BD6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5116085A18A1ABEB009BD6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		51DE6C5B189C743E0062D7AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -772,6 +822,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5116085818A1ABEB009BD6FD /* Build configuration list for PBXLegacyTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5116085918A1ABEB009BD6FD /* Debug */,
+				5116085A18A1ABEB009BD6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		51DE6C35189C743D0062D7AD /* Build configuration list for PBXProject "Segway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -97,7 +97,7 @@ If you need to give more parameters to the segue, you may need to subclass a `AC
 
 ## Documentation
 
-TODO
+If you have [appledoc](http://gentlebytes.com/appledoc/) installed, you can generate the documentation by running the corresponding target.
 
 ## Demo
 

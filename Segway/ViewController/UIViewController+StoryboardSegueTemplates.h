@@ -11,6 +11,11 @@
 @class ACStoryboardSegueTemplate, ACStoryboardSegue;
 
 
+/** UIViewController (StoryboardSegueTemplates) is a category to manage segues.
+ *
+ * This category let you programmatically register a ACStoryboardSegueTemplate with a UIViewController.
+ */
+
 @interface UIViewController (StoryboardSegueTemplates)
 
 @property (nonatomic, copy) NSArray *ac_storyboardSegueTemplates;                           // storyboardSegueTemplates
@@ -22,6 +27,10 @@
 
 //TODO: - (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo;
 
+/** Register a segue template.
+ * @param segueTemplate A segue template to register with the view controller.
+ * @discussion Registered templates can be called with the performSegueWithIdentifier:sender: method. Templates registered this way cannot be performed by a storyboard.
+ */
 - (void)registerSegueTemplate:(ACStoryboardSegueTemplate*)segueTemplate;
 
 @end
