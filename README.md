@@ -101,7 +101,10 @@ If you have [appledoc](http://gentlebytes.com/appledoc/) installed, you can gene
 
 ## Demo
 
-TODO
+Two demo apps are available:
+
+- SegwayDemo let you try every Segway's segues
+- SegwayDemoWithoutStoryboard let you push a simple view controller and works without any storyboard at all
 
 ## Bugs and limitations
 
