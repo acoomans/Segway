@@ -31,6 +31,10 @@
 
 #pragma mark - Segues
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender userInfo:(NSDictionary *)userInfo {
+    NSLog(@"prepareForSegue:%@ sender:%@ userInfo:%@", segue, sender, userInfo);
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"prepareForSegue:%@ sender:%@", segue, sender);
 }

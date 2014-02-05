@@ -8,6 +8,8 @@
 
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardSegue.h"
+#import "UIViewController+SegueUserInfo.h"
+
 
 @implementation ACStoryboardSegueTemplate
 
@@ -46,12 +48,20 @@
 
 
 - (void)perform:(id)sender {
+    [self perform:sender userInfo:nil];
+}
+
+- (void)perform:(id)sender userInfo:(NSDictionary*)userInfo {
     if (![self.viewController respondsToSelector:@selector(shouldPerformSegueWithIdentifier:sender:)] || [self.viewController shouldPerformSegueWithIdentifier:self.identifier sender:sender]) {
         [self _perform:sender];
     }
 }
 
 - (void)_perform:(id)sender {
+    [self _perform:sender userInfo:nil];
+}
+
+- (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo {
     
     UIViewController *viewController = nil;
     
@@ -66,9 +76,17 @@
     }
 
     ACStoryboardSegue *storyboardSegue = [self segueWithDestinationViewController:viewController];
+    
+    // ac addition
+    storyboardSegue.userInfo = userInfo;
+    if ([self.viewController respondsToSelector:@selector(prepareForSegue:sender:userInfo:)]) {
+        [self.viewController prepareForSegue:storyboardSegue sender:sender userInfo:userInfo];
+    }
+    
 	[self.viewController prepareForSegue:(UIStoryboardSegue*)storyboardSegue sender:sender];
 	[storyboardSegue perform];
 }
+
 
 - (Class)effectiveSegueClass {
     if (self.segueClassName) {

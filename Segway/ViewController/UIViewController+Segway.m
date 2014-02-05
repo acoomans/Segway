@@ -1,12 +1,12 @@
 //
-//  UIViewController+ACStoryboardSegueTemplates.m
+//  UIViewController+Segway.m
 //  Segway
 //
 //  Created by Arnaud Coomans on 01/02/14.
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import "UIViewController+StoryboardSegueTemplates.h"
+#import "UIViewController+Segway.h"
 #import <objc/runtime.h>
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardSegue.h"
@@ -15,7 +15,7 @@
 
 static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerSegueTemplates";
 
-@implementation UIViewController (StoryboardSegueTemplates)
+@implementation UIViewController (Segway)
 
 #pragma mark - Load
 
@@ -59,16 +59,16 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
 #pragma mark - Performing a template
 
 - (void)ac_override_performSegueWithIdentifier:(NSString*)identifier sender:(id)sender {
-	ACStoryboardSegueTemplate *segueTemplate = [self ac_segueTemplateWithIdentifier:identifier];
-	if (segueTemplate) {
-		[segueTemplate _perform:sender];
-	} else {
-        [self ac_override_performSegueWithIdentifier:identifier sender:sender];
-	}
+    [self performSegueWithIdentifier:identifier sender:sender userInfo:nil];
 }
 
 - (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo {
-    
+	ACStoryboardSegueTemplate *segueTemplate = [self ac_segueTemplateWithIdentifier:identifier];
+	if (segueTemplate) {
+		[segueTemplate _perform:sender userInfo:userInfo];
+	} else {
+        [self ac_override_performSegueWithIdentifier:identifier sender:sender];
+	}
 }
 
 @end

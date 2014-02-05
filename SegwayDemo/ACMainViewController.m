@@ -117,7 +117,7 @@ NS_ENUM(NSInteger, ACMainViewControllerSectionStoryboardRow) {
     switch (indexPath.section) {
         case ACMainViewControllerSectionSegway: {
             ACStoryboardSegueTemplate *segueTemplate = self.ac_storyboardSegueTemplates[indexPath.row];
-            [self performSegueWithIdentifier:segueTemplate.identifier sender:self];
+            [self performSegueWithIdentifier:segueTemplate.identifier sender:self userInfo:@{@"indexPath": indexPath}];
         }
         case ACMainViewControllerSectionStoryboard: {
             return;
@@ -126,6 +126,10 @@ NS_ENUM(NSInteger, ACMainViewControllerSectionStoryboardRow) {
 }
 
 #pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender userInfo:(NSDictionary *)userInfo {
+    NSLog(@"prepareForSegue:%@ sender:%@ userInfo:%@", segue, sender, userInfo);
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"prepareForSegue:%@ sender:%@", segue, sender);

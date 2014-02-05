@@ -11,7 +11,9 @@ Whether you simply like the perform/prepare segue pattern; or you want to slowly
 
 ## Install
 
-TODO
+Import files under the _Segway_ directory in your project or use the static library (use OTHER_LINKER_FLAGS="-ObjC").
+
+TODO cocoapods
 
 ## Usage
 
@@ -56,6 +58,26 @@ Then attach it to the view controller:
 This is the same as UIKit's segues:
 
 	[self performSegueWithIdentifier:@"push" sender:self];
+    
+If you want to pass extra information, you can use the user info:
+
+    [self performSegueWithIdentifier:@"push" sender:self userInfo:@{@"indexPath": indexPath}];
+    
+You can then implement `prepareForSegue:sender:userInfo:` to access the user info:
+
+	- (void)prepareForSegue:(ACStoryboardSegue*)segue sender:(id)sender userInfo:(NSDictionary *)userInfo {
+	    ...
+	}
+	
+Or, because `prepareForSegue:sender:` still works, you can use it as well, and access userInfo from the segue (don't forget to use _ACStoryboardSegue_ as type for the segue):
+
+	- (void)prepareForSegue:(ACStoryboardSegue*)segue sender:(id)sender {
+		NSDictionary *userInfo = segue.userInfo;
+		...
+	}
+
+Note: userInfo only works for ACStoryboardSegues.
+
 
 ### Unwinding
 
@@ -110,8 +132,9 @@ Two demo apps are available:
 
 Given the complexity of reverse-engineering UIKit and its numerous of (subtle) private functions, there are some aspects that weren't implemented or aren't working correctly:
 
-- unwinding from popover does not work
+- unwinding from popover does not work.
 - no support for the iPad's split view controller, more specifically:
-	- the _replace_ segue is not implemented
-	- performing *any* other segue in a split view controller is not implemented
+	- the _replace_ segue is not implemented.
+	- performing *any* other segue in a split view controller is not implemented.
 - storyboards cannot perform segues defined programmatically with Segway. You need to call them programmatically.
+- user info is only for programmatically-defined ACStoryboardSegues.

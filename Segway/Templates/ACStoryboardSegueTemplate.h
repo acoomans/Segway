@@ -25,7 +25,6 @@
  *
  * Like UIStoryboardSegueTemplate, ACStoryboardSegueTemplate can use a view controller's storyboard ID to instanciate a UIViewController. However, UIStoryboardSegueTemplate can also instanciate an UIViewController from a class and/or a Nib instead.
  *
- *
  * # Subclassing
  * You would subclass ACStoryboardSegueTemplate if you want a custom ACStoryboardSegue that takes arguments. Add corresponding properties, and override the defaultSegueClassName method.
  *
@@ -84,7 +83,10 @@
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 - (void)perform:(id)sender;
+- (void)perform:(id)sender userInfo:(NSDictionary*)userInfo;
+    
 - (void)_perform:(id)sender;
+- (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo;
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController;
 

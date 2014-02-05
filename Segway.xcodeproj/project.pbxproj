@@ -46,7 +46,7 @@
 		51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */; };
 		51DE6C7B189DD8960062D7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C7A189DD8960062D7AD /* UIKit.framework */; };
 		51DE6C81189DEAD80062D7AD /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C80189DEAD80062D7AD /* Default.storyboard */; };
-		51DE6C85189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C84189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m */; };
+		51DE6C85189DEDBA0062D7AD /* UIViewController+Segway.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE6C84189DEDBA0062D7AD /* UIViewController+Segway.m */; };
 		51DE6C8D189E02F30062D7AD /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51DE6C8C189E02F30062D7AD /* Navigation.storyboard */; };
 		51DE6C93189E068E0062D7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C3D189C743D0062D7AD /* Foundation.framework */; };
 		51DE6C95189E068E0062D7AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE6C94189E068E0062D7AD /* CoreGraphics.framework */; };
@@ -88,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5106D26918A2343400CF9F2E /* UIViewController+SegueUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SegueUserInfo.h"; sourceTree = "<group>"; };
 		51160856189FA0BE009BD6FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5116085F18A1CF34009BD6FD /* SegwayDemoWithoutStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegwayDemoWithoutStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5116086518A1CF34009BD6FD /* SegwayDemoWithoutStoryboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegwayDemoWithoutStoryboard-Info.plist"; sourceTree = "<group>"; };
@@ -151,8 +152,8 @@
 		51DE6C71189C80ED0062D7AD /* ACStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACStoryboardPushSegue.m; sourceTree = "<group>"; };
 		51DE6C7A189DD8960062D7AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		51DE6C80189DEAD80062D7AD /* Default.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
-		51DE6C83189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StoryboardSegueTemplates.h"; sourceTree = "<group>"; };
-		51DE6C84189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StoryboardSegueTemplates.m"; sourceTree = "<group>"; };
+		51DE6C83189DEDBA0062D7AD /* UIViewController+Segway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Segway.h"; sourceTree = "<group>"; };
+		51DE6C84189DEDBA0062D7AD /* UIViewController+Segway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Segway.m"; sourceTree = "<group>"; };
 		51DE6C8C189E02F30062D7AD /* Navigation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
 		51DE6C92189E068E0062D7AD /* SegwayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegwayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51DE6C94189E068E0062D7AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -399,8 +400,9 @@
 		51DE6C82189DEDBA0062D7AD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				51DE6C83189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.h */,
-				51DE6C84189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m */,
+				51DE6C83189DEDBA0062D7AD /* UIViewController+Segway.h */,
+				51DE6C84189DEDBA0062D7AD /* UIViewController+Segway.m */,
+				5106D26918A2343400CF9F2E /* UIViewController+SegueUserInfo.h */,
 				51230F4B189F41960086BAAD /* UIViewController+ResponderChain.h */,
 				51230F4C189F41960086BAAD /* UIViewController+ResponderChain.m */,
 				51230F51189F6A710086BAAD /* UIResponder+ResponderChain.h */,
@@ -615,7 +617,7 @@
 			files = (
 				51230F38189F33CC0086BAAD /* ACStoryboardPushSegueTemplate.m in Sources */,
 				51DE6D19189E1B010062D7AD /* ACStoryboardModalSegue.m in Sources */,
-				51DE6C85189DEDBA0062D7AD /* UIViewController+StoryboardSegueTemplates.m in Sources */,
+				51DE6C85189DEDBA0062D7AD /* UIViewController+Segway.m in Sources */,
 				51DE6C72189C80ED0062D7AD /* ACStoryboardPushSegue.m in Sources */,
 				51230F39189F33CC0086BAAD /* ACStoryboardSegueTemplate.m in Sources */,
 				51E421AB189F0951003FEFD3 /* ACStoryboardEmbedSegue.m in Sources */,
@@ -966,6 +968,7 @@
 				5116085A18A1ABEB009BD6FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5116088918A1CF35009BD6FD /* Build configuration list for PBXNativeTarget "SegwayDemoWithoutStoryboard" */ = {
 			isa = XCConfigurationList;
@@ -974,6 +977,7 @@
 				5116088B18A1CF35009BD6FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51DE6C35189C743D0062D7AD /* Build configuration list for PBXProject "Segway" */ = {
 			isa = XCConfigurationList;

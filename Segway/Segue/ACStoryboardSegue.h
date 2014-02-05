@@ -66,6 +66,12 @@
  */
 @property (copy, nonatomic) void(^performHandler)();
 
+
+/** Application-specific user info that can be attached to the segue.
+ */
+@property (copy, nonatomic) NSDictionary *userInfo;
+
+
 /** @name Initializing a Storyboard Segue */
 
 /** Initializes and returns a storyboard segue object for use in performing a segue.

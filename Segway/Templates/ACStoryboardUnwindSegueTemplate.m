@@ -26,7 +26,7 @@
 
 #pragma mark - Perform segue
 
-- (void)_perform:(id)sender {
+- (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo {
     
     if (!self.action) {
         @throw [NSException exceptionWithName:NSInvalidArgumentException
