@@ -12,7 +12,7 @@
 
 #pragma mark - Perform segue
 
-- (void)perform {
+- (void)performAnimated:(BOOL)animated {
     if (!self.useDefaultModalPresentationStyle) {
         self.destinationViewController.modalPresentationStyle = self.modalPresentationStyle;
     }
@@ -22,7 +22,7 @@
     }
     
     // UIKit uses the deprecated presentViewController:animated:, we use the newer method
-    [self.sourceViewController presentViewController:self.destinationViewController animated:self.animates completion:nil];
+    [self.sourceViewController presentViewController:self.destinationViewController animated:(animated && self.animates) completion:nil];
 }
 
 @end

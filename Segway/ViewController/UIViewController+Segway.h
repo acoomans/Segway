@@ -37,6 +37,10 @@
 - (void)performSegueWithIdentifier:(NSString*)identifier sender:(id)sender userInfo:(NSDictionary*)userInfo;
 
 
+//TODO
+- (void)performSeguePath:(NSString*)path sender:(id)sender userInfo:(NSDictionary*)userInfo animated:(BOOL)animated;
+
+
 /** Register a segue template.
  * @param segueTemplate A segue template to register with the view controller.
  * @discussion Registered templates can be called with the performSegueWithIdentifier:sender: method. Templates registered this way cannot be performed by a storyboard.

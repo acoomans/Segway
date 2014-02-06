@@ -71,4 +71,24 @@ static char const * const UIViewControllerSegueTemplatesKey = "UIViewControllerS
 	}
 }
 
+- (void)performSeguePath:(NSString*)path sender:(id)sender userInfo:(NSDictionary*)userInfo animated:(BOOL)animated {
+    NSArray *identifiers = [path componentsSeparatedByString:@"."];
+    NSString *firstIdentifier = [identifiers firstObject];
+    NSArray *nextIdentifiers = [identifiers subarrayWithRange:NSMakeRange(1, identifiers.count-1)];
+    NSString *nextPath = [nextIdentifiers componentsJoinedByString:@"."];
+    
+    if (firstIdentifier.length) {
+        ACStoryboardSegueTemplate *segueTemplate = [self ac_segueTemplateWithIdentifier:firstIdentifier];
+        if (segueTemplate) {
+            UIViewController *nextViewController = [segueTemplate _perform:sender userInfo:userInfo animated:animated];
+            [nextViewController performSeguePath:nextPath sender:sender userInfo:userInfo animated:animated]; //TODO: force not animated?
+            
+        } else {
+            @throw [NSException exceptionWithName:NSInvalidArgumentException
+                                           reason:[NSString stringWithFormat:@"Receiver (%@) has no segue with identifier '%@'", self, firstIdentifier]
+                                         userInfo:nil];
+        }
+    }
+}
+
 @end

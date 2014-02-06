@@ -13,7 +13,7 @@
 
 #pragma mark - Perform segue
 
-- (void)perform {
+- (void)performAnimated:(BOOL)animated {
     
     if (!self.containerView) {
         // UIKit uses a NSAssertionHandler, we'll use an exception instead

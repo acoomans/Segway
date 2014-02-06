@@ -31,6 +31,10 @@
 #pragma mark - Perform segue
 
 - (void)perform {
+    [self performAnimated:YES];
+}
+
+- (void)performAnimated:(BOOL)animated {
     if (self.performHandler) {
         self.performHandler();
     } else {

@@ -92,4 +92,7 @@
  */
 - (void)perform;
 
+//TODO
+- (void)performAnimated:(BOOL)animated;
+
 @end

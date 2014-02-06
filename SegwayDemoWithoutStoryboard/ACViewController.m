@@ -41,6 +41,11 @@
                                                         destinationViewControllerClassName:NSStringFromClass(ACViewController.class)
                                                                                withNibName:nil
                                                                                     bundle:nil]];
+    
+    [self registerSegueTemplate:[[ACStoryboardModalSegueTemplate alloc] initWithIdentifier:@"modal"
+                                                       destinationViewControllerClassName:NSStringFromClass(ACViewController.class)
+                                                                              withNibName:nil
+                                                                                   bundle:nil]];
 
     [self registerSegueTemplate:[[ACStoryboardUnwindSegueTemplate alloc] initWithIdentifier:@"unwind"
                                                                                      action:@"unwindToViewController:"]];
@@ -49,7 +54,8 @@
 #pragma mark - Actions
 
 - (IBAction)perform:(id)sender {
-    [self performSegueWithIdentifier:@"push" sender:nil userInfo:@{@"message": @"Push!"}];
+    //[self performSegueWithIdentifier:@"push" sender:nil userInfo:@{@"message": @"Push!"}];
+    [self performSeguePath:@"push.modal" sender:nil userInfo:@{@"message": @"Push!"} animated:NO];
 }
 
 - (IBAction)unwind:(id)sender {

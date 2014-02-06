@@ -12,7 +12,7 @@
 
 #pragma mark - Perform segue
 
-- (void)perform {
+- (void)performAnimated:(BOOL)animated {
     
     if (!self.sourceViewController.navigationController) {
         
@@ -27,7 +27,7 @@
         @throw [NSException exceptionWithName:NSGenericException reason:msg userInfo:nil];
         
     }
-    [self.sourceViewController.navigationController pushViewController:self.destinationViewController animated:YES];
+    [self.sourceViewController.navigationController pushViewController:self.destinationViewController animated:animated];
 }
 
 @end

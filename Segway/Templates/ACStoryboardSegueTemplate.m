@@ -58,20 +58,24 @@
 }
 
 - (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo {
+    [self _perform:sender userInfo:userInfo animated:YES];
+}
+
+- (UIViewController*)_perform:(id)sender userInfo:(NSDictionary*)userInfo animated:(BOOL)animated {
     
-    UIViewController *viewController = nil;
+    UIViewController *destinationViewController = nil;
     
     if (self.viewController.storyboard) {
-        viewController = [self.viewController.storyboard instantiateViewControllerWithIdentifier:self.destinationViewControllerIdentifier];
+        destinationViewController = [self.viewController.storyboard instantiateViewControllerWithIdentifier:self.destinationViewControllerIdentifier];
     }
     
     // ac addition
-    if (!viewController) {
+    if (!destinationViewController) {
         Class class = NSClassFromString(self.destinationClassName);
-        viewController = [[class alloc] initWithNibName:self.destinationNibName bundle:self.destinationBundle];
+        destinationViewController = [[class alloc] initWithNibName:self.destinationNibName bundle:self.destinationBundle];
     }
 
-    ACStoryboardSegue *storyboardSegue = [self segueWithDestinationViewController:viewController];
+    ACStoryboardSegue *storyboardSegue = [self segueWithDestinationViewController:destinationViewController];
     
     // ac addition
     storyboardSegue.userInfo = userInfo;
@@ -79,8 +83,14 @@
         [self.viewController prepareForSegue:storyboardSegue sender:sender userInfo:userInfo];
     }
     
+    //TODO
+    destinationViewController.view; //force view load
+    
 	[self.viewController prepareForSegue:(UIStoryboardSegue*)storyboardSegue sender:sender];
-	[storyboardSegue perform];
+	[storyboardSegue performAnimated:animated];
+    
+    // ac addition
+    return destinationViewController;
 }
 
 

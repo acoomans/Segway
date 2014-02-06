@@ -86,6 +86,7 @@
     
 - (void)_perform:(id)sender;
 - (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo;
+- (UIViewController*)_perform:(id)sender userInfo:(NSDictionary*)userInfo animated:(BOOL)animated;
 
 - (ACStoryboardSegue*)segueWithDestinationViewController:(UIViewController*)destinationViewController;
 

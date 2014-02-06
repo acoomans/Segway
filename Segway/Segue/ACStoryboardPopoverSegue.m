@@ -31,15 +31,15 @@
 
 #pragma mark - Perform segue
 
-- (void)perform {
+- (void)performAnimated:(BOOL)animated {
     
     [self.destinationViewController ac_setSourceViewControllerIfPresentedViaPopoverSegue:self.sourceViewController];
     
     if (self.anchorBarButtonItem) {
-        [self.popoverController presentPopoverFromBarButtonItem:self.anchorBarButtonItem permittedArrowDirections:self.permittedArrowDirections animated:YES];
+        [self.popoverController presentPopoverFromBarButtonItem:self.anchorBarButtonItem permittedArrowDirections:self.permittedArrowDirections animated:animated];
         
     } else if (self.anchorView) {
-        [self.popoverController presentPopoverFromRect:self.anchorRect inView:self.anchorView.superview permittedArrowDirections:self.permittedArrowDirections animated:YES];
+        [self.popoverController presentPopoverFromRect:self.anchorRect inView:self.anchorView.superview permittedArrowDirections:self.permittedArrowDirections animated:animated];
         
     } else {
         
