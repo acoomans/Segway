@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Segway/**/*.{h,m}'
   s.requires_arc = true
   
-  non_arc_files = 'Segway/Segue/UIPopoverController+SelfRetained.m', 'Segway/swizzling.h'
+  non_arc_files = 'Segway/Segue/UIPopoverController+SelfRetained.h', 'Segway/Segue/UIPopoverController+SelfRetained.m', 'Segway/swizzling.h'
   s.exclude_files = non_arc_files
   s.subspec 'no-arc' do |sna|
     sna.requires_arc = false
