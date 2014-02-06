@@ -10,6 +10,7 @@
 #import "UIViewController+ResponderChain.h"
 #import "UIPopoverController+SelfRetained.h"
 #import "UIViewController+SourceViewController.h"
+#import "UIStoryboardSegue+UserInfo.h"
 
 
 @implementation ACStoryboardUnwindSegueTemplate
@@ -49,6 +50,7 @@
         UIStoryboardSegue *segue = [executor segueForUnwindingToViewController:target
                                                             fromViewController:self.viewController
                                                                     identifier:self.identifier];
+        segue.userInfo = userInfo;
         
         if (segue) {
             [self.viewController prepareForSegue:segue sender:sender];

@@ -8,6 +8,7 @@
 
 #import "UIViewController+Segway.h"
 #import "UIPopoverController+SelfRetained.h"
+#import "UIStoryboardSegue+UserInfo.h"
 
 #import "ACStoryboardSegueTemplate.h"
 #import "ACStoryboardPushSegueTemplate.h"

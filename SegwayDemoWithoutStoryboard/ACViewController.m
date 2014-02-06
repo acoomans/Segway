@@ -49,11 +49,11 @@
 #pragma mark - Actions
 
 - (IBAction)perform:(id)sender {
-    [self performSegueWithIdentifier:@"push" sender:nil];
+    [self performSegueWithIdentifier:@"push" sender:nil userInfo:@{@"message": @"Push!"}];
 }
 
 - (IBAction)unwind:(id)sender {
-    [self performSegueWithIdentifier:@"unwind" sender:nil];
+    [self performSegueWithIdentifier:@"unwind" sender:nil userInfo:@{@"message": @"Unwind!"}];
 }
 
 #pragma mark - Segues
@@ -64,6 +64,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"prepareForSegue:%@ sender:%@", segue, sender);
+    NSLog(@"userInfo:%@", segue.userInfo);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender userInfo:(NSDictionary*)userInfo {
+    NSLog(@"prepareForSegue:%@ sender:%@ userInfo:%@", segue, sender, userInfo);
 }
 
 

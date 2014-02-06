@@ -90,14 +90,14 @@ You can then implement `prepareForSegue:sender:userInfo:` to access the user inf
 	    ...
 	}
 	
-Or, because `prepareForSegue:sender:` still works, you can use it as well, and access userInfo from the segue (don't forget to use _ACStoryboardSegue_ as type for the segue):
+Or, because `prepareForSegue:sender:` still works, you can use it as well, and access userInfo from the segue:
 
-	- (void)prepareForSegue:(ACStoryboardSegue*)segue sender:(id)sender {
+	- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
 		NSDictionary *userInfo = segue.userInfo;
 		...
 	}
 
-Note: userInfo only works for ACStoryboardSegues.
+Note: userInfo only works for ACStoryboardSegues and unwinding UIStoryboardSegue.
 
 
 ### Unwinding
