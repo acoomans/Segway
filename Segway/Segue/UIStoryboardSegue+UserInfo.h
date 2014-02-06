@@ -10,6 +10,8 @@
 
 @interface UIStoryboardSegue (UserInfo)
 
+/** Application-specific user info that can be attached to the segue.
+ */
 @property (nonatomic, strong) NSDictionary *userInfo;
 
 @end
