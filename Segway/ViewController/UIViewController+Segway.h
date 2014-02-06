@@ -29,6 +29,7 @@
  * @param identifier The string that identifies the segue.
  * @param sender The object that you want to use to initiate the segue. This object is made available for informational purposes during the actual segue.
  * @param userInfo The user information dictionary stores any additional objects that source view controller may use during prepareForSegue:sender:.
+ * @exception NSInvalidArgumentException An exception is thrown if no template was found for the identifier.
  * @discussion If the segue is initiated through a ACStoryboardTemplate registered with registerSegueTemplate:, UIViewController's prepareForSegue:sender: and prepareForSegue:sender:userInfo: methods will be called if implemented.
  *
  *  **Note:** This method will work for both ACStoryboardSegue (i.e. segues defined programmatically) and UIStoryboardSegue (segues defined in a storyboard), but the prepareForSegue:sender:userInfo: method will only be called for a ACStoryboardSegue.
