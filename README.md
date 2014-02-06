@@ -2,7 +2,8 @@
 
 Segway is an open source implementation of iOS' segues.
 
-Segway is a library that lets you perform and unwind segues programmatically (like with UIKit), but it also allows you to *define* the segues programmatically. Moreover, it allows you to perform segues without *any* storyboard, by loading view controllers directly from a class and/or a Nib.
+Segway is a library that lets you perform and unwind segues programmatically (like with UIKit), but it also allows you to *define* the segues programmatically. 
+Moreover, it allows you to perform segues without *any* storyboard, by loading view controllers directly from a class and/or a Nib. Finally, Segway let you attach _user info_ to your segues, for when the sender isn't enough.
 
 Whether you simply like the perform/prepare segue pattern; or you want to slowly get rid of that storyboard in a project you inherited, Segway gives you more flexibility in using segues programmatically.
  
