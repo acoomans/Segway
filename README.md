@@ -7,13 +7,34 @@ Segway is a library that lets you perform and unwind segues programmatically (li
 Whether you simply like the perform/prepare segue pattern; or you want to slowly get rid of that storyboard in a project you inherited, Segway gives you more flexibility in using segues programmatically.
  
 [![Build Status](https://api.travis-ci.org/acoomans/Segway.png)](https://api.travis-ci.org/acoomans/PSegway.png)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/Segway/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASegway%2A)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/p/Segway/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3ASegway%2A)
 
 
-## Install
+## Install 
 
-Import files under the _Segway_ directory in your project or use the static library (use OTHER_LINKER_FLAGS="-ObjC").
+### Install with [CocoaPods](http://cocoapods.org)
 
-TODO cocoapods
+Add a pod entry to your Podfile:
+
+    pod 'Segway', '~> 0.0.1'
+
+Install the pod(s) by running:
+
+    pod install
+    
+### Install with static libary
+
+Copy the Segway project file in your project and link your target with the static library.
+
+### Install manually
+
+1. clone this repository
+2. import files under the _Segway_ directory in your project
+3. disable arc with `-fno-objc-arc` for _UIPopoverController+SelfRetained.m_
+4. set `OTHER_LINKER_FLAGS="-ObjC"` for your target
+
+    
 
 ## Usage
 
