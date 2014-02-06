@@ -83,7 +83,6 @@
 - (instancetype)initWithIdentifier:(NSString*)identifier destinationViewControllerClassName:(NSString*)className withNibName:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 - (void)perform:(id)sender;
-- (void)perform:(id)sender userInfo:(NSDictionary*)userInfo;
     
 - (void)_perform:(id)sender;
 - (void)_perform:(id)sender userInfo:(NSDictionary*)userInfo;

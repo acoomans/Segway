@@ -48,10 +48,6 @@
 
 
 - (void)perform:(id)sender {
-    [self perform:sender userInfo:nil];
-}
-
-- (void)perform:(id)sender userInfo:(NSDictionary*)userInfo {
     if (![self.viewController respondsToSelector:@selector(shouldPerformSegueWithIdentifier:sender:)] || [self.viewController shouldPerformSegueWithIdentifier:self.identifier sender:sender]) {
         [self _perform:sender];
     }
